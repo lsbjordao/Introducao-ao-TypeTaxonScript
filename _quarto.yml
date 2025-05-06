@@ -7,7 +7,12 @@ execute:
   
 book:
   title: Introdução ao ![](images/logo.jpg){width=50%}
-  author: "Lucas S.B. Jordão"
+  author:
+    - Lucas S.B. Jordão
+    - Marli P. Morim
+    - Marcelo F. Simon
+    - André Eppinghaus
+    - Vicente Calfo
   date: "04/27/2025"
   chapters:
     - index.qmd
