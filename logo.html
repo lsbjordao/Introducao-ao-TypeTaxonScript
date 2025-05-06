@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TypeTaxonScript Logo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      padding: 40px;
+    }
+
+    table {
+      margin: auto;
+      border-collapse: collapse;
+    }
+
+    td {
+      vertical-align: middle;
+    }
+
+    .curly-brace {
+      font-size: 80px;
+      font-family: monospace;
+      text-align: right;
+      padding-right: 5px;
+      line-height: 1;
+    }
+
+    .tree-container {
+      position: relative;
+      width: 150px;
+      height: 180px;
+    }
+
+    .icon {
+      font-size: 28px;
+      color: #000;
+      position: absolute;
+    }
+
+    .folder {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .file1 {
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .file2 {
+      top: 140px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Linha vertical da pasta até o meio */
+    .line-vertical {
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 60px;
+      background-color: #000;
+    }
+
+    /* Linhas horizontais conectadas */
+    .line-h1, .line-h2 {
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      background-color: #000;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .line-h1 {
+      top: 100px;
+    }
+
+    .line-h2 {
+      top: 140px;
+    }
+
+    .text-stack {
+      font-family: 'Georgia', serif;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 1.2;
+      text-align: left;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <!-- Coluna com { -->
+      <td class="curly-brace">{</td>
+
+      <!-- Estrutura da árvore -->
+      <td>
+        <div class="tree-container">
+          <i class="far fa-folder icon folder"></i>
+          <div class="line-vertical"></div>
+          <div class="line-h1"></div>
+          <div class="line-h2"></div>
+          <i class="far fa-file icon file1"></i>
+          <i class="far fa-file icon file2"></i>
+        </div>
+      </td>
+
+      <!-- Coluna com } -->
+      <td class="curly-brace">}</td>
+
+      <!-- Texto elegante -->
+      <td class="text-stack">
+        Type<br>
+        Taxon<br>
+        Script
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

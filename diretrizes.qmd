@@ -1,0 +1,412 @@
+# Diretrizes Padrão
+
+As recomendações padrão servem como a base sobre a qual estabelecemos um ambiente de desenvolvimento coeso e estruturado. Ao seguir diligentemente essas normas e recomendações, estabelecemos as bases para um ecossistema de desenvolvimento que não apenas facilita a comunicação clara, a colaboração e práticas de codificação intuitivas, mas também se alinha aos domínios específicos do desenvolvimento em TypeScript (TS) e da gestão de dados de biodiversidade.
+
+Neste banco de dados, cada pedaço de informação deve ser organizado dentro de uma **classe** predefinida. Por exemplo, **táxons**, **caracteres** e **fontes** são representados como classes, cada uma armazenada em seu próprio arquivo `.ts`.
+
+A estrutura subjacente dos organismos, conforme delineada por taxonomistas e biólogos, é abstraída em uma **árvore hierárquica de caracteres**. Essa hierarquia é refletida em uma **organização aninhada de diretórios**, cada um contendo arquivos `.ts`. Os caracteres biológicos são encapsulados como classes.  
+
+- Se uma classe que descreve um caráter **depender de outras classes**, ela é implementada como um **diretório com o nome da classe**, contendo um arquivo `index.ts` (por exemplo, a classe `Flower`, que importa outras classes, é definida em `Flower/index.ts`). Esse `index.ts` é importado e exportado usando o nome do diretório, referenciando implicitamente o arquivo `index.ts`.
+- Se uma classe que descreve um caráter **não possuir dependências**, ela é representada por um único arquivo `.ts` com o nome da classe (por exemplo, `Calyx.ts`).
+
+As interconexões entre esses componentes são estabelecidas por meio dos mecanismos de **importação e exportação de módulos**.
+
+Por exemplo, em nosso banco de dados pré-construído, o gênero **Mimosa L.** é exemplificado por uma classe chamada `Mimosa`. Essa classe é acompanhada por um arquivo `index.ts` dentro do diretório `Mimosa`, oferecendo uma descrição abrangente da classe `Mimosa`. Da mesma forma, os atributos de uma **folha** são descritos dentro de um único arquivo `index.ts` no diretório correspondente.
+
+O processo de inserção de dados ocorre dentro do arquivo da espécie correspondente. Cada pedaço de informação é acomodado em um **objeto** que está alinhado a uma classe específica. Esses objetos são ajustados para interagir de forma fluida com suas respectivas classes, facilitando o armazenamento organizado dos dados no banco de dados.  
+O primeiro passo consiste na **instanciação de um objeto**, seguido pelo **preenchimento desse objeto com dados**. Esse processo é fundamental para o acesso aos atributos e métodos do objeto associado à classe instanciada durante a compilação. Ele também permite a utilização de ferramentas de autocompletar. No código, uma nova instância de classe é criada da seguinte maneira: `new NomeDaClasse()`.
+
+A modelagem de classes constitui uma tarefa fundamental dentro deste banco de dados. Ela envolve a definição de **atributos** e **métodos**. Embora exija esforço de codificação, essa prática é essencial para definir corretamente os tipos de dados aceitos por cada atributo (ou propriedade).
+
+As **fontes** são representadas como instâncias da classe `Sources` e podem ser associadas a táxons ou caracteres específicos. A instanciação de fontes, no entanto, é realizada por meio da função `extends` no TypeScript. Essa decisão de design assegura que todas as classes no banco de dados possam incorporar uma fonte. A classe `Sources` funciona como um **repositório** para estabelecer conexões entre fontes bibliográficas — incluindo elementos como imagens ou outros formatos de dados — e as estruturas distintas dos organismos.
+
+## Convenções de Nomeação de Diretórios e Arquivos
+
+Na raiz do projeto, encontramos os diretórios `taxa` e `characters`, que servem como repositórios para nosso banco de dados de gêneros e espécies, juntamente com suas características, representadas como uma árvore de caracteres.
+
+Dentro do diretório `characters`, estabelecemos uma hierarquia aninhada de características relacionadas ao corpo do organismo, ou seja, a árvore de caracteres. Os caracteres são organizados em diretórios de acordo com sua hierarquia. Cada nível de hierarquia é encapsulado dentro de um diretório que leva o nome da classe, acompanhado de um arquivo `index.ts`.  
+Dentro deste arquivo `index.ts`, as classes utilizadas no seu escopo são tanto importadas quanto exportadas. No nível mais alto do diretório `characters`, encontramos os caracteres iniciais, como: `stems` (caules), `leaves` (folhas), `trichomes` (tricomas), `prickles` (acúleos), `inflorescence` (inflorescência), `flowers` (flores), `fruits` (frutos) e `seeds` (sementes).  
+
+Em situações em que uma classe não depende de nenhuma outra, o nome do arquivo corresponde ao nome da classe, com a inicial maiúscula (por exemplo, `Calyx.ts`).
+
+Dentro do diretório `taxa`, geramos subdiretórios nomeados de acordo com o epíteto genérico (por exemplo, *Mimosa*). Em cada um desses subdiretórios, é gerado um arquivo `index.ts`. Este arquivo é responsável por importar todas as classes de caracteres utilizadas para descrever os atributos de uma espécie pertencente ao respectivo gênero, contribuindo assim para a estrutura abrangente do nosso banco de dados.  
+A organização sistemática é aprimorada detalhando cada espécie individual em um arquivo `.ts` distinto, localizado dentro do diretório correspondente ao gênero (por exemplo, `./Taxa/Mimosa/Mimosa_sevilhae.ts`).
+
+## Árvore de Caracteres
+
+Um banco de dados pré-construído, que contém a árvore de caracteres localizada no diretório `characters`, foi criado com base em pesquisas taxonômicas envolvendo o gênero *Mimosa* (Leguminosae, Caesalpinoideae) [@Jordao2014; @JordaoEtlAl2017; @JordaoEtAl2018; @Jordao2020].  
+Conforme a tradição, este banco de dados é inicialmente disponibilizado como a **versão 1**. Projetos futuros que sigam esses padrões podem usar este projeto como ponto de partida.
+
+## Descrição do Gênero
+
+Dentro do diretório do gênero, o arquivo `index.ts` deve contemplar a importação de todos os caracteres localizados no primeiro nível da árvore de caracteres, declarando-os como atributos.  
+Observe que os caracteres importados, como `Stems` e `Leaf`, são descritos em arquivos `.ts` dedicados dentro do diretório `characters`.
+
+As linhas iniciais de código envolvem a importação de todos os caracteres definidos no primeiro nível da árvore de caracteres, juntamente com as classes de anotação. Em seguida, realiza-se a tarefa de criação da classe `Mimosa`.  
+Ao estender a classe `Sources`, permite-se associar uma fonte diretamente a uma espécie, diferenciando-se da associação de fontes a partes componentes, como caracteres na árvore de caracteres.  
+É importante não esquecer de exportar a classe `Mimosa`.  
+
+Veja o exemplo:
+
+```ts
+// Importar caracteres
+import {
+    Stems,
+    Leaf,
+    // outras classes do primeiro nível da árvore de caracteres
+} from '././characters/v1'
+
+// Importar classes de anotação
+import { Sources } from '././characters/v1/Sources'
+import { DescriptionAuthorship } from '././characters/v1/descriptionAuthorship'
+
+export class Mimosa extends Sources {
+    specificEpithet: string
+    habit: 'tree' | 'shrub' | 'subshrub' | 'herb'
+    stems: Stems
+    leaf: Leaf
+    // outros atributos
+
+    constructor() {
+        super()
+    }
+}
+```
+
+No trecho de código fornecido, vale enfatizar que, conforme convencionalmente entendido, as linhas iniciadas com `//` são utilizadas exclusivamente para comentários dentro do código.
+
+## Descrição de espécies
+
+Informações completas sobre uma espécie são cuidadosamente armazenadas em um arquivo `.ts` individual dentro do diretório correspondente ao seu gênero. Para descrever uma espécie, é necessário importar a classe do gênero *Mimosa*, importar as classes de caracteres, descrever a espécie utilizando os caracteres importados e, por fim, exportar a classe que representa essa espécie descrita. Essa estrutura também pode acomodar outros táxons infraespecíficos no banco de dados.  
+A classe `Mimosa` funciona como o módulo central para a construção de todas as espécies de Mimosa, abrangendo a montagem da respectiva árvore de caracteres.
+
+## Importação de módulos
+As primeiras linhas de código envolvem a importação de táxons, caracteres e classes de anotações. Para importar, utilize a seguinte sintaxe:
+
+```ts
+// Importar gênero Mimosa
+import { Mimosa } from '.'
+
+// Importar caracteres
+import { Stems, Trichomes } from '././characters/v1'
+import { Capitate } from '../../characters/v1/Trichomes'
+import { CapitateFiliform } from '../../characters/v1/Trichomes/Capitate'
+
+// Importar classes de anotação
+import { Source, DescriptionAuthorship } from '../../characters/v1'
+```
+
+Para um processo de importação mais organizado, pode-se utilizar a técnica de desestruturação de objetos, permitindo a aquisição eficiente de classes de módulos interconectados.
+
+## Descrição
+
+Ao descrever uma espécie, recomenda-se criar uma constante utilizando a seguinte sintaxe: `Mimosa_osmarii`.  
+Embora variáveis em JavaScript geralmente usem *camelCase*, no desenvolvimento de um banco de dados de biodiversidade, sugere-se usar *snake_case* para variáveis que armazenam descrições. Além disso, para respeitar as regras de nomenclatura biológica, o nome do gênero deve ser capitalizado — ou seja, um *Snake_case*.
+
+Use notação de ponto (*dot notation*) para criar objetos dentro de objetos. Essa notação melhora a legibilidade do código e é considerada uma "açúcar sintático".
+
+Para instanciar uma classe como um objeto na descrição, é necessário fazer a instanciação dentro de um objeto que aceite a classe instanciada. No exemplo abaixo, o código funciona porque a classe `Mimosa` possui o atributo `specificEpithet`, que recebe um valor do tipo primitivo `string`:
+
+```ts
+// Descrição de Mimosa leptantha
+const Mimosa_leptantha = new Mimosa()
+Mimosa_leptantha.specificEpithet = 'leptantha'
+```
+
+É importante instanciar cada classe aninhada antes de declarar um atributo. Para descrever adequadamente a presença ou ausência de características específicas, é necessário seguir convenções precisas.  
+Os termos `is` e `are` servem como sinônimos para indicar a presença ou ausência da característica com base em nomes de objetos singulares ou plurais. Recomenda-se indicar a presença ou ausência imediatamente após a instanciação da nova classe:
+
+```ts
+Mimosa_leptantha.stems = new Stems()
+Mimosa_leptantha.stems.trichomes = new Trichomes()
+Mimosa_leptantha.stems.trichomes.capitate = new Capitate()
+Mimosa_leptantha.stems.trichomes.capitate.filiform = new CapitateFiliform()
+Mimosa_leptantha.stems.trichomes.capitate.filiform.are = 'present'
+```
+
+Com base no exemplo acima, estamos afirmando a presença de tricomas capitado-filiformes nos caules de *Mimosa leptantha* Benth., no banco de dados.
+
+## Anotações
+
+Recomenda-se fortemente que as anotações sejam declaradas por último — mas, claro, antes da exportação da descrição da espécie.  
+Após a descrição, é importante adicionar o autor da descrição utilizando o atributo `descriptionAuthorship`, que recebe o nome e uma data em *timestamp* Unix (contagem de segundos desde 00:00:00 UTC de 01 de janeiro de 1970).
+
+```bash
+// Autoria da descrição
+Mimosa_leptantha.descriptionAuthorship = new DescriptionAuthorship()
+Mimosa_leptantha.descriptionAuthorship.addAuthor({
+  name: 'June Doe',
+  date: 1692107172
+})
+```
+
+A classe `Source` foi modelada para armazenar citações no estilo *bibtex*, mas acrescentamos o atributo `obtainingMethod`, que pode ter um dos seguintes valores: `nakedEyes`, `stereoscope`, `opticalMicroscope`, `scanningElectronMicroscope`, `tranmissionElectronMicroscope`, `photo`, `drawing`.
+
+Para adicionar uma fonte e vincular a publicação à parte da planta, primeiro precisamos criar uma constante que armazenará a classe `Source`, e então usar o método `addSource()`:
+
+```ts
+// Fontes
+
+/// Tricomas
+const source1 = new Source()
+source1.sourceType = 'article'
+source1.authorship = 'Jordão, L.S.B. & Morim, M.P. & Baumgratz, J.F.A.'
+source1.year = '2020'
+source1.title = 'Trichomes in *Mimosa* (Leguminosae): Towards a characterization and a terminology standardization'
+source1.journal = 'Flora'
+source1.number = '272'
+source1.pages = '151702'
+source1.figure = '9I, J, K, L'
+source1.obtainingMethod = 'scanningElectronMicroscope'
+
+Mimosa_leptantha.stems.trichomes.capitate.filiform.addSource(source1)
+```
+
+## Exportação de módulos
+
+Embora existam diversas formas de exportar módulos em JS e TS, uma prática padrão é garantir que a espécie esteja completamente descrita, e que a última linha do arquivo seja a exportação da variável.  
+Essa abordagem melhora a legibilidade e a manutenção do código:
+
+```ts
+// Exportar Mimosa leptantha
+export { Mimosa_leptantha }
+```
+
+## Modelagem de classes de caracteres
+
+Em TypeScript, as classes de caracteres são estruturadas como classes propriamente ditas. O nome da classe segue a convenção PascalCase e é definido usando a sintaxe: `class Fruit {}`.
+
+Ao importar uma classe para a descrição de caracteres, é crucial evitar nomes duplicados. Assim, torna-se necessário lidar com a ocorrência de nomes de personagens repetidos.
+
+Nos casos em que uma estrutura tem nomes com hífens, como 'setiform-capitate' ou 'stellate-lepidote', o nome da classe começa com a primeira palavra. Nesses casos, ela é transformada em `SetiformCapitate` e `StellateLepidote`.
+
+Para classes com nomes genéricos como 'abaxial', 'adaxial' ou 'margin', a prática recomendada é começar com o nome comum seguido da estrutura anatômica correspondente. Por exemplo, `AbaxialLeaflet` e `MarginBracteole`.
+
+Os nomes de atributos dentro das classes seguem o padrão camelCase e são definidos com a sintaxe: `numberOfPairs: number`. Isso reflete os pares chave-valor característicos de objetos JSON.
+
+Os atributos podem incluir diferentes tipos de dados, como strings e números. Veja alguns exemplos ilustrativos:
+
+Definindo um atributo `specificEpithet` da classe `Mimosa` que armazena um valor do tipo string:
+
+```ts
+class Mimosa {
+    specificEpithet: string
+}
+```
+
+Definindo um atributo `numberOfPairs` para a classe `Pinnae`, com valor do tipo number:
+
+```ts
+class Pinnae {
+    numberOfPairs: number
+}
+```
+
+Apresentando tipos alternativos para um atributo usando o símbolo de barra vertical (`|`):
+
+```ts
+class Replum {
+    shape: 'straight' | 'undulate'
+}
+```
+
+Permitindo versatilidade para um caráter multivalorado com `(valor | valor | valor)[]`:
+
+```ts
+class Leaflet {
+    shape:
+        'linear' |
+        'lanceolate' |
+        'elliptic' |
+        'oval' |
+        (
+            'linear' |
+            'lanceolate' |
+            'elliptic' |
+            'oval'
+        )[]
+}
+```
+
+Após descrever os atributos da classe, é necessário invocar a função `constructor() {}` para instanciar cada atributo assim que o módulo for importado em outro local.
+
+Os métodos da classe são listados após o construtor. Na hora de nomear métodos para caracteres e documentar sua funcionalidade, é essencial manter uma abordagem consistente e informativa. Optamos por evitar o uso de funções nativas para favorecer a intuitividade. Os nomes dos métodos seguem um formato padronizado, como o uso de `add` para métodos como `addSource`. Ao especificar dados, utiliza-se `set`, como em `setLength`, para garantir uniformidade e clareza.
+
+Neste código, foi desenvolvido um conjunto de métodos para gerenciar medidas de diferentes dimensões — especificamente comprimento, altura e largura. Esses métodos permitem definir e manipular precisamente essas medidas para diversos objetos. Aceitando valores numéricos, as funções `setLength`, `setHeight` e `setWidth` definem individualmente as dimensões principais. Além disso, as funções `_setLengthMinMax`, `setHeightMinMax` e `setWidthMinMax` permitem especificar intervalos, considerando valores mínimos e máximos. As funções `setLengthRarelyMin` e `setLengthRarelyMax` permitem a entrada de valores mínimos e máximos usados ocasionalmente — o mesmo vale para altura e largura. Esses métodos, em conjunto, contribuem para um framework abrangente de gerenciamento de atributos dimensionais, conforme condições e restrições específicas que podem ser verificadas em tempo de execução.
+
+Por fim, durante a exportação, se uma classe possuir atributos que são outras classes com seus próprios atributos — formando um padrão aninhado — é necessário exportar não apenas a classe criada, mas também cada atributo importado. Isso garante a coerência de importações e exportações entre módulos.
+
+## Documentação em TypeScript
+
+Este documento fornece diretrizes para documentar descrições de táxons, cobrindo tanto tags obrigatórias quanto opcionais. Campos obrigatórios incluem o nome do autor e a data, os quais atribuem a devida autoria à descrição.
+
+O processo de documentação utiliza TSDoc. A primeira linha deve servir como título da classe. Para ampliar as descrições de classes, pode-se usar a tag `@remarks`. Vários elementos de marcação Markdown funcionam dentro do TSDoc, e tópicos podem ser adicionados iniciando a linha com um hífen `-`.
+
+Uma tag essencial é `@source`, que permite a adição de referências bibliográficas. Dentro da tag `@source`, a notação Markdown para links HTML, como `[rótulo](link)`, pode ser usada de forma eficaz. Assim, URLs com DOI podem ser citadas para estabelecer links diretos no banco de dados.
+
+### Documentação de Táxon
+
+Ao documentar os atributos de um gênero, recomenda-se incluir o nome do gênero na primeira linha de cada bloco TSDoc.
+
+Antes da seção `constructor() {}`, é aconselhável declarar "Creates an instance of \[class]". Essa prática reforça os princípios da POO. Nosso banco de dados contém exclusivamente uma classe de táxon, `Mimosa`, que representa um gênero. Para documentar essa classe, é utilizada uma sintaxe especializada:
+
+```ts
+export class Mimosa extends Sources {
+    /**
+     * Espécies de *Mimosa*
+     */
+    specificEpithet: string
+
+    /**
+     * Hábito de *Mimosa*
+     */
+    habit: 'tree' | 'shrub' | 'subshrub' | 'herb'
+
+    /**
+     * Caule de *Mimosa*.
+     */
+    stems: Stems
+
+    /**
+     * Acúleos de *Mimosa*.
+     */
+    prickles: Prickles
+
+    /**
+     * Folha de *Mimosa*: bipinada
+     */
+    leaf: Leaf
+
+    /**
+     * Cria uma instância da espécie *Mimosa*.
+     */
+    constructor() {
+        super()
+    }
+}
+```
+
+Para a descrição do gênero, a documentação dos principais caracteres pode ser armazenada assim:
+
+```ts
+export class Mimosa extends Sources {
+    /**
+     * Tricomas de *Mimosa*.
+     *
+     * @remarks
+     * Os tricomas em *Mimosa* podem ser classificados nos seguintes tipos:
+     * - **filiforme**
+     * - **setiforme**
+     * - **estrelado**
+     * - **dendrítico**
+     * - **prostrado**
+     * - **fasciculado**
+     * - **verruciforme**
+     * - **lepidoto**
+     * - **granular**
+     * - **capitado-filiforme**
+     * - **capitado-setiforme**
+     *
+     * @source [Jordão et al. (2020)](https://doi.org/10.1016/j.flora.2020.151702)
+     * @source [Santos-Silva et al. (2013)](https://doi.org/10.11646/phytotaxa.119.1.1)
+     */
+    trichomes: Trichomes
+
+    /**
+     * Cria uma instância da espécie *Mimosa*.
+     */
+    constructor() {
+        super()
+    }
+}
+```
+
+### Documentação de Caracteres
+
+Para documentar uma classe de caráter, recomenda-se incluir o nome da classe-pai em cada atributo. Dentro de `@remarks`, considere listar os tipos de atributo como tópicos separados e destacá-los com **negrito**. Após o `:`, forneça uma explicação descritiva. Essa abordagem garante clareza e descrição completa dos tipos.
+
+Como ilustrado no exemplo abaixo, o nome do atributo é reiterado e vinculado à classe associada. Essa prática garante coesão na montagem dos objetos dentro da árvore de caracteres:
+
+```ts
+export class Epicarp extends Sources {
+    /**
+     * Tipo de epicarpo.
+     */
+    type: 'monospermic' | 'undivided'
+
+    /**
+     * Margem do epicarpo.
+     *
+     * @remarks
+     * A margem do epicarpo pode ser: 'reta' ou 'ondulada':
+     * - **straight**: A margem do epicarpo é reta e não ondulada.
+     * - **undulate**: A margem do epicarpo é ondulada e não reta.
+     */
+    margin: 'straight' | 'undulate'
+
+    /**
+     * Cria uma instância de Epicarp.
+     */
+    constructor() {
+        super()
+    }
+}
+```
+
+## Exportação do Banco de Dados
+
+Para exportar o banco de dados em formato JSON, apresentamos um método que envolve a recuperação de todos os arquivos de espécies do diretório do gênero e sua organização em um array de objetos. Adicionalmente, implementamos uma camada de validação que verifica e remove duplicatas dentro desses arrays, mas outras validações podem ser implementadas.
+
+A classe `Sources`, representada como um array de objetos, pode estar presente em todas as profundidades dentro da descrição dos táxons e da árvore de caracteres. Para facilitar a recuperação e consulta de dados, especialmente dados relacionados às fontes, incluímos um método para exportar um banco de dados de fontes. Esse banco permite recuperar informações posicionais (como índice e caminho JSON) dentro do banco de dados principal. Essas informações são particularmente úteis para localizar exatamente o caráter associado a uma fonte específica.
+
+## Versionamento com Git
+
+No contexto do versionamento com Git, as mensagens de *commit* podem seguir uma semântica padronizada para garantir uma comunicação clara — e até permitir certa automação dentro do sistema Git.
+
+### Adicionando um novo táxon
+
+Em cenários onde uma nova entrada taxonômica é inserida no banco de dados, o formato sugerido para a mensagem de *commit* é o seguinte:
+
+```bash
+feat(taxon): Add taxon "Mimosa osmarii"
+
+Add taxon to the database.
+```
+
+Esse formato resume de forma concisa a essência do *commit* ao encapsular a ação ("Add"), a entidade afetada ("taxon") e o nome específico da entidade ("Mimosa osmarii"). A descrição complementar fornece mais contexto, garantindo que outros desenvolvedores compreendam a natureza da adição.
+
+### Atualizando dados de um táxon
+
+Quando atualizações são feitas nos dados de um táxon já existente, a estrutura da mensagem de *commit* segue este padrão:
+
+```bash
+feat(taxon): Update taxon "Mimosa osmarii"
+
+Update data of taxon in the database.
+```
+
+Essa estrutura comunica de forma clara a alteração feita ("Update taxon"), especifica o táxon modificado ("Mimosa osmarii") e fornece uma breve descrição da modificação.
+
+### Adicionando um novo caráter
+
+A introdução de novos caracteres no banco de dados segue uma lógica semântica semelhante:
+
+```bash
+feat(character): Add character "Leaf", "Petiole"
+
+Add character(s) to the database.
+```
+
+O identificador "feat(character)" indica a adição de um caráter, seguido pelos nomes dos caracteres. A descrição associada esclarece a ação executada.
+
+### Atualizando um caráter
+
+A atualização de informações de caracteres existentes também segue essa estrutura:
+
+```bash
+feat(character): Update character "Leaf", "Petiole"
+
+Update character(s) in the database.
+```
+
+A consistência na estrutura permite uma compreensão rápida da alteração ("Update character"), identifica os caracteres modificados ("Leaf" e "Petiole") e resume brevemente a atualização realizada.

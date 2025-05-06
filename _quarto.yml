@@ -1,0 +1,33 @@
+project:
+  type: book
+
+execute:
+  echo: false
+  
+book:
+  title: "Introdução ao TypeTaxonScript"
+  author: "Lucas S.B. Jordão"
+  date: "04/27/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - contexto.qmd
+    - diretrizes.qmd
+    - tutorial.qmd
+    - chamado.qmd
+    - conclusao.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    number-sections: false
+  pdf:
+    documentclass: scrreprt
+
+
+
