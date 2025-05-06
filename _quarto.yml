@@ -14,7 +14,7 @@ book:
     - Marcelo F. Simon
     - André Eppinghaus
     - Vicente Calfo
-  date: "04/27/2025"
+  date: "05/06/2025"
   chapters:
     - index.qmd
     - intro.qmd
@@ -28,6 +28,7 @@ book:
   google-analytics: "G-NY1CF9TG2M"
 
 bibliography: references.bib
+lang: pt
 
 format:
   html:
