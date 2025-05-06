@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>TypeTaxonScript Logo</title>
+  <title>TypeTaxonScript Preciso</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
+      background: #fff;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
       padding: 40px;
     }
 
@@ -20,71 +22,16 @@
       vertical-align: middle;
     }
 
+    .move-text {
+      padding-top: 12px;
+    }
+
     .curly-brace {
-      font-size: 80px;
+      font-size: 40px;
       font-family: monospace;
-      text-align: right;
-      padding-right: 5px;
-      line-height: 1;
-    }
-
-    .tree-container {
-      position: relative;
-      width: 150px;
-      height: 180px;
-    }
-
-    .icon {
-      font-size: 28px;
-      color: #000;
-      position: absolute;
-    }
-
-    .folder {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .file1 {
-      top: 100px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .file2 {
-      top: 140px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    /* Linha vertical da pasta até o meio */
-    .line-vertical {
-      position: absolute;
-      top: 35px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 60px;
-      background-color: #000;
-    }
-
-    /* Linhas horizontais conectadas */
-    .line-h1, .line-h2 {
-      position: absolute;
-      width: 60px;
-      height: 2px;
-      background-color: #000;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .line-h1 {
-      top: 100px;
-    }
-
-    .line-h2 {
-      top: 140px;
+      text-align: center;
+      padding: 0 10px;
+      transform: scaleY(2.5);
     }
 
     .text-stack {
@@ -93,38 +40,119 @@
       font-size: 24px;
       line-height: 1.2;
       text-align: left;
-      padding-left: 20px;
+    }
+
+    svg {
+      overflow: visible;
+      display: block;
+    }
+
+    .fa-icon-pasta {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 400;
+      font-size: 30px;
+      text-anchor: start;
+      dominant-baseline: middle;
+      fill: #000;
+    }
+
+    .fa-icon {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 400;
+      font-size: 25px;
+      text-anchor: start;
+      dominant-baseline: middle;
+      fill: #000;
+    }
+
+    .link {
+      stroke: #000;
+      stroke-width: 2.5px;
+      fill: none;
     }
   </style>
 </head>
+
 <body>
   <table>
     <tr>
-      <!-- Coluna com { -->
+      <!-- Chave esquerda -->
       <td class="curly-brace">{</td>
 
-      <!-- Estrutura da árvore -->
+      <!-- SVG com estrutura -->
       <td>
-        <div class="tree-container">
-          <i class="far fa-folder icon folder"></i>
-          <div class="line-vertical"></div>
-          <div class="line-h1"></div>
-          <div class="line-h2"></div>
-          <i class="far fa-file icon file1"></i>
-          <i class="far fa-file icon file2"></i>
-        </div>
+        <svg id="tree" width="45" height="110"></svg>
       </td>
 
-      <!-- Coluna com } -->
+      <!-- Chave direita -->
       <td class="curly-brace">}</td>
 
-      <!-- Texto elegante -->
+      <!-- Texto -->
       <td class="text-stack">
-        Type<br>
-        Taxon<br>
-        Script
+        <div class="move-text">
+          Type<br>
+          Taxon<br>
+          Script
+        </div>
       </td>
     </tr>
   </table>
+
+  <script>
+    const svg = d3.select("#tree");
+
+    // Coordenadas
+    const folderX = 0;
+    const folderY = 30;
+    const file1Y = 65;
+    const file2Y = 100;
+    const lineLength = 20;
+
+    // Ícone da pasta
+    svg.append("text")
+      .attr("class", "fa-icon-pasta")
+      .attr("x", folderX - 3)
+      .attr("y", folderY)
+      .text('\uf07b'); // 📁
+
+    // Linha vertical central
+    svg.append("line")
+      .attr("class", "link")
+      .attr("x1", folderX + 10)
+      .attr("y1", folderY + 10)
+      .attr("x2", folderX + 10)
+      .attr("y2", file2Y + 1);
+
+    // ├── para o primeiro arquivo
+    svg.append("line")
+      .attr("class", "link")
+      .attr("x1", folderX + 10)
+      .attr("y1", file1Y)
+      .attr("x2", folderX + lineLength + 5)
+      .attr("y2", file1Y);
+
+    // └── para o segundo arquivo
+    svg.append("line")
+      .attr("class", "link")
+      .attr("x1", folderX + 10)
+      .attr("y1", file2Y)
+      .attr("x2", folderX + lineLength + 5)
+      .attr("y2", file2Y);
+
+    // Arquivo 1
+    svg.append("text")
+      .attr("class", "fa-icon")
+      .attr("x", folderX + lineLength + 5)
+      .attr("y", file1Y)
+      .text('\uf15b'); // 📄
+
+    // Arquivo 2
+    svg.append("text")
+      .attr("class", "fa-icon")
+      .attr("x", folderX + lineLength + 5)
+      .attr("y", file2Y)
+      .text('\uf15b'); // 📄
+  </script>
 </body>
+
 </html>

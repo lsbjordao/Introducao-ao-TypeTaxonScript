@@ -1,11 +1,12 @@
 project:
   type: book
+  output-dir: docs
 
 execute:
   echo: false
   
 book:
-  title: "Introdução ao TypeTaxonScript"
+  title: Introdução ao ![](images/logo.jpg){width=50%}
   author: "Lucas S.B. Jordão"
   date: "04/27/2025"
   chapters:
@@ -17,6 +18,8 @@ book:
     - chamado.qmd
     - conclusao.qmd
     - references.qmd
+  favicon: images/logo.jpg
+  google-analytics: "G-NY1CF9TG2M"
 
 bibliography: references.bib
 
@@ -26,6 +29,16 @@ format:
       - cosmo
       - brand
     number-sections: false
+    include-in-header:
+      - text: |
+          <script src="nav-arrows.js"></script>
+          <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    include-after-body: 
+      - text: |
+          <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+          <script>
+            AOS.init();
+          </script>
   pdf:
     documentclass: scrreprt
 
