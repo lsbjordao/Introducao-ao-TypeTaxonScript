@@ -25,9 +25,10 @@ bibliography: references.bib
 
 format:
   html:
+    smooth-scroll: true
     theme:
-      - cosmo
-      - brand
+      light: brite
+      dark: cyborg
     number-sections: false
     include-in-header:
       - text: |

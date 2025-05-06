@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.22">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tutorial – Introdução ao ![](images/logo.jpg){width=50%}</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chamado.html" rel="next">
+<link href="./diretrizes.html" rel="prev">
+<link href="./images/logo.jpg" rel="icon" type="image/jpeg">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NY1CF9TG2M"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
+</script>
+<script src="nav-arrows.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorial.html"><span class="chapter-title">Tutorial</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introdução ao <img src="images/logo.jpg" class="img-fluid" style="width:50.0%"></a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resumo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introdução</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contexto.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contexto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diretrizes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Diretrizes Padrão</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorial.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Tutorial</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chamado.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Chamada à ação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conclusão</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#instalar-o-node.js" id="toc-instalar-o-node.js" class="nav-link active" data-scroll-target="#instalar-o-node.js">Instalar o Node.js</a></li>
+  <li><a href="#instalar-o-visual-studio-code" id="toc-instalar-o-visual-studio-code" class="nav-link" data-scroll-target="#instalar-o-visual-studio-code">Instalar o Visual Studio Code</a></li>
+  <li><a href="#clonar-o-repositório-do-github-no-vs-code" id="toc-clonar-o-repositório-do-github-no-vs-code" class="nav-link" data-scroll-target="#clonar-o-repositório-do-github-no-vs-code">Clonar o repositório do GitHub no VS Code</a></li>
+  <li><a href="#abrir-o-diretório-do-projeto-tts-no-vs-code" id="toc-abrir-o-diretório-do-projeto-tts-no-vs-code" class="nav-link" data-scroll-target="#abrir-o-diretório-do-projeto-tts-no-vs-code">Abrir o diretório do projeto TTS no VS Code</a></li>
+  <li><a href="#instalar-o-pacote-tts" id="toc-instalar-o-pacote-tts" class="nav-link" data-scroll-target="#instalar-o-pacote-tts">Instalar o pacote TTS</a></li>
+  <li><a href="#desinstalar-o-pacote-tts" id="toc-desinstalar-o-pacote-tts" class="nav-link" data-scroll-target="#desinstalar-o-pacote-tts">Desinstalar o pacote TTS</a></li>
+  <li><a href="#inicializar-um-projeto-tts" id="toc-inicializar-um-projeto-tts" class="nav-link" data-scroll-target="#inicializar-um-projeto-tts">Inicializar um projeto TTS</a></li>
+  <li><a href="#descrever-um-novo-táxon" id="toc-descrever-um-novo-táxon" class="nav-link" data-scroll-target="#descrever-um-novo-táxon">Descrever um novo táxon</a></li>
+  <li><a href="#importar-de-um-arquivo-.csv" id="toc-importar-de-um-arquivo-.csv" class="nav-link" data-scroll-target="#importar-de-um-arquivo-.csv">Importar de um arquivo .csv</a></li>
+  <li><a href="#documentação" id="toc-documentação" class="nav-link" data-scroll-target="#documentação">Documentação</a></li>
+  <li><a href="#edição-de-táxons" id="toc-edição-de-táxons" class="nav-link" data-scroll-target="#edição-de-táxons">Edição de táxons</a></li>
+  <li><a href="#referência-cruzada" id="toc-referência-cruzada" class="nav-link" data-scroll-target="#referência-cruzada">Referência cruzada</a></li>
+  <li><a href="#edição-multilinha" id="toc-edição-multilinha" class="nav-link" data-scroll-target="#edição-multilinha">Edição multilinha</a></li>
+  <li><a href="#formatação-automática-de-código" id="toc-formatação-automática-de-código" class="nav-link" data-scroll-target="#formatação-automática-de-código">Formatação automática de código</a></li>
+  <li><a href="#controle-de-versão-com-git" id="toc-controle-de-versão-com-git" class="nav-link" data-scroll-target="#controle-de-versão-com-git">Controle de versão com Git</a></li>
+  <li><a href="#exportar-banco-de-dados-.json" id="toc-exportar-banco-de-dados-.json" class="nav-link" data-scroll-target="#exportar-banco-de-dados-.json">Exportar banco de dados .json</a>
+  <ul class="collapse">
+  <li><a href="#conjunto-de-dados-de-fontes" id="toc-conjunto-de-dados-de-fontes" class="nav-link" data-scroll-target="#conjunto-de-dados-de-fontes">Conjunto de dados de fontes</a></li>
+  </ul></li>
+  <li><a href="#exportar-banco-de-dados-.csv" id="toc-exportar-banco-de-dados-.csv" class="nav-link" data-scroll-target="#exportar-banco-de-dados-.csv">Exportar banco de dados .csv</a></li>
+  <li><a href="#navegando-no-banco-de-dados" id="toc-navegando-no-banco-de-dados" class="nav-link" data-scroll-target="#navegando-no-banco-de-dados">Navegando no banco de dados</a></li>
+  <li><a href="#métodos-de-consulta" id="toc-métodos-de-consulta" class="nav-link" data-scroll-target="#métodos-de-consulta">Métodos de consulta</a>
+  <ul class="collapse">
+  <li><a href="#consulta-por-caminho-de-caractere" id="toc-consulta-por-caminho-de-caractere" class="nav-link" data-scroll-target="#consulta-por-caminho-de-caractere">Consulta por caminho de caractere</a></li>
+  <li><a href="#consulta-flexível-chave-valor" id="toc-consulta-flexível-chave-valor" class="nav-link" data-scroll-target="#consulta-flexível-chave-valor">Consulta flexível chave-valor</a></li>
+  <li><a href="#consulta-por-intervalo" id="toc-consulta-por-intervalo" class="nav-link" data-scroll-target="#consulta-por-intervalo">Consulta por intervalo</a></li>
+  <li><a href="#consulta-de-fontes" id="toc-consulta-de-fontes" class="nav-link" data-scroll-target="#consulta-de-fontes">Consulta de fontes</a></li>
+  <li><a href="#outras-aplicações-de-consulta" id="toc-outras-aplicações-de-consulta" class="nav-link" data-scroll-target="#outras-aplicações-de-consulta">Outras aplicações de consulta</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Tutorial</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="instalar-o-node.js" class="level2">
+<h2 class="anchored" data-anchor-id="instalar-o-node.js">Instalar o Node.js</h2>
+<p>Antes de começar, certifique-se de que o Node.js está instalado no seu sistema. O Node.js é essencial para executar aplicações JavaScript na sua máquina. Você pode baixá-lo e instalá-lo no site oficial do Node.js: <a href="https://nodejs.org/">https://nodejs.org/</a>.</p>
+</section>
+<section id="instalar-o-visual-studio-code" class="level2">
+<h2 class="anchored" data-anchor-id="instalar-o-visual-studio-code">Instalar o Visual Studio Code</h2>
+<p>O Visual Studio Code (VS Code) é um editor de código versátil que oferece uma interface amigável e uma variedade de extensões para melhorar o desenvolvimento. Baixe e instale o VS Code pelo site oficial: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>.</p>
+</section>
+<section id="clonar-o-repositório-do-github-no-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="clonar-o-repositório-do-github-no-vs-code">Clonar o repositório do GitHub no VS Code</h2>
+<p>Para clonar o repositório do projeto Mimosa para o TTS a partir do GitHub, siga estes passos:</p>
+<ol type="1">
+<li>No VS Code, abra o <em>Command Palette</em> com <code>Ctrl + Shift + P</code> (Windows/Linux) ou <code>Cmd + Shift + P</code> (macOS).</li>
+<li>Digite <code>Git: Clone</code> e selecione a opção que aparecer.</li>
+<li>Um campo de texto será exibido no topo da janela. Insira a URL do repositório: <code>https://github.com/lsbjordao/TTS-Mimosa</code></li>
+<li>Escolha um diretório local onde deseja salvar o repositório.</li>
+</ol>
+<p><strong>Recomendamos fortemente evitar espaços ou caracteres incomuns no caminho escolhido para evitar problemas ao abrir arquivos clicando no terminal do IDE.</strong></p>
+</section>
+<section id="abrir-o-diretório-do-projeto-tts-no-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="abrir-o-diretório-do-projeto-tts-no-vs-code">Abrir o diretório do projeto TTS no VS Code</h2>
+<ol type="1">
+<li>Clique em <em>Arquivo</em> no menu superior.</li>
+<li>Selecione <em>Abrir Pasta</em>.</li>
+<li>Navegue até o local onde está o diretório do projeto TTS (ex: TTS-Mimosa).</li>
+<li>Selecione o diretório e clique em <em>Abrir</em>.</li>
+</ol>
+</section>
+<section id="instalar-o-pacote-tts" class="level2">
+<h2 class="anchored" data-anchor-id="instalar-o-pacote-tts">Instalar o pacote TTS</h2>
+<p>No VS Code, abra o terminal e execute o comando na raiz do projeto, onde está o <code>package.json</code>:</p>
+<ol type="1">
+<li>Vá ao menu superior e clique em <em>Terminal</em> → <em>Novo Terminal</em>.</li>
+<li>Digite e execute:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> type-taxon-script</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Instale com a flag <code>-g</code> para evitar que dependências sejam criadas dentro do diretório do projeto. Caso contrário, será gerada uma pasta <code>./node_modules</code> e um arquivo <code>package.json</code> localmente.</p>
+<p>Para verificar se a instalação foi bem-sucedida, use:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para ver a ajuda com todos os comandos disponíveis:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> <span class="at">--help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="desinstalar-o-pacote-tts" class="level2">
+<h2 class="anchored" data-anchor-id="desinstalar-o-pacote-tts">Desinstalar o pacote TTS</h2>
+<p>Para desinstalar o pacote TTS, use:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> uninstall <span class="at">-g</span> @lsbjordao/type-taxon-script</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="inicializar-um-projeto-tts" class="level2">
+<h2 class="anchored" data-anchor-id="inicializar-um-projeto-tts">Inicializar um projeto TTS</h2>
+<p>Para iniciar um projeto TTS:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Esse comando verifica se há um projeto existente e cria os diretórios obrigatórios <code>./input</code> e <code>./output</code>, mas <strong>somente</strong> se as pastas <code>characters</code> e <code>taxon</code> já existirem.</p>
+</section>
+<section id="descrever-um-novo-táxon" class="level2">
+<h2 class="anchored" data-anchor-id="descrever-um-novo-táxon">Descrever um novo táxon</h2>
+<p>Para criar um novo arquivo <code>.ts</code> com a hierarquia completa de caracteres, use:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> new <span class="at">--genus</span> Mimosa <span class="at">--species</span> epithet</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Um arquivo chamado <code>Mimosa_epithet.ts</code> será gerado no diretório <code>./output</code>. <strong>Antes de editar</strong>, mova esse arquivo para a pasta <code>./taxon</code>, pois o script só funciona corretamente dentro dela. Fora dessa pasta, ocorrerão erros de dependência.</p>
+</section>
+<section id="importar-de-um-arquivo-.csv" class="level2">
+<h2 class="anchored" data-anchor-id="importar-de-um-arquivo-.csv">Importar de um arquivo .csv</h2>
+<p>Também é possível importar dados de múltiplos táxons a partir de um <code>.csv</code>, com o comando:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> import <span class="at">--genus</span> Mimosa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O arquivo <code>.csv</code> deve:</p>
+<ul>
+<li>Usar <code>;</code> como separador e <code>"</code> como delimitador de texto</li>
+<li>Ter pelo menos a coluna <code>specificEpithet</code></li>
+<li>Usar o caminho JSON completo como nome de cada coluna</li>
+</ul>
+<p>Para indicar múltiplos estados em uma célula, use:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[</span><span class="st">'4-merous'</span><span class="ex">,</span> <span class="st">'5-merous'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para características que são objetos-chave (ex: tipos de inflorescência), crie colunas como <code>inflorescence.capitate</code> e insira <code>yes</code> na célula correspondente ao táxon.</p>
+<p>Os arquivos <code>.ts</code> gerados serão salvos em <code>./output</code>, mas devem ser movidos manualmente para <code>./taxon</code> para funcionar corretamente.</p>
+</section>
+<section id="documentação" class="level2">
+<h2 class="anchored" data-anchor-id="documentação">Documentação</h2>
+<p>Todos os elementos do código têm metadados (<a href="#fig-tsdoc" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>). Ao passar o cursor sobre eles no VS Code, as informações aparecem em um <em>popup</em>.</p>
+<div id="fig-tsdoc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tsdoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/tsdoc.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tsdoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Ao passar o cursor sobre um texto em uma IDE como o VS Code, um pop-up exibirá seus metadados.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="edição-de-táxons" class="level2">
+<h2 class="anchored" data-anchor-id="edição-de-táxons">Edição de táxons</h2>
+<p>Para editar um arquivo <code>.ts</code> de espécie:</p>
+<ul>
+<li>Digite <code>'</code> ou <code>"</code> após o sinal <code>=</code> para ver as opções de atributos (<a href="#fig-characters-options" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>)</li>
+<li>Pressione <code>Enter</code> para confirmar</li>
+<li>O VS Code oferece autocompletar com os estados válidos de cada propriedade</li>
+</ul>
+<div id="fig-characters-options" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-characters-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/characterOptions.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-characters-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: O VS Code auxilia com sua ferramenta de autocompletar, exibindo todos os estados permitidos para cada propriedade.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="referência-cruzada" class="level2">
+<h2 class="anchored" data-anchor-id="referência-cruzada">Referência cruzada</h2>
+<ul>
+<li>Ao segurar <code>Ctrl</code> e clicar em uma classe, o arquivo com a descrição da classe é aberto automaticamente.</li>
+<li>Também é possível ver onde cada classe é utilizada em outras partes do código.</li>
+<li>Isso ajuda a navegar rapidamente pela hierarquia de caracteres.</li>
+</ul>
+<p>Além disso, temos a capacidade de rastrear onde uma determinada classe está sendo utilizada. Por exemplo, ao procurar por ocorrências do uso de uma classe de caractere, podemos simplesmente inspecionar o nome da classe. Como ilustrado no exemplo, uma galha (<code>Gall</code>) é mencionada na descrição de <em>Mimosa gemmulata</em> Barneby, e ao clicar sobre ela, podemos abrir rapidamente seu respectivo arquivo (<a href="#fig-cross-reference" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>).</p>
+<div id="fig-cross-reference" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cross-reference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/whereClass.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cross-reference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: O cruzamento de dependências entre módulos ajuda a identificar rapidamente onde um caractere é invocado, enquanto o VS Code rastreia e exibe com eficiência o uso de cada caractere da árvore de caracteres.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="edição-multilinha" class="level2">
+<h2 class="anchored" data-anchor-id="edição-multilinha">Edição multilinha</h2>
+<p>Use <code>Ctrl + Shift + L</code> para edição em múltiplas linhas. Pressione <code>Esc</code> para encerrar.</p>
+<div id="fig-multi-line" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-multi-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/multiline.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-multi-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.4: Editar código pode ser desafiador às vezes, mas o VS Code oferece ferramentas úteis para tornar o processo mais ágil, como a edição em múltiplas linhas.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="formatação-automática-de-código" class="level2">
+<h2 class="anchored" data-anchor-id="formatação-automática-de-código">Formatação automática de código</h2>
+<p>Clique com o botão direito em qualquer lugar do código e escolha <em>Formatar Documento</em>. Isso ajusta automaticamente indentação, espaçamento e estilo.</p>
+</section>
+<section id="controle-de-versão-com-git" class="level2">
+<h2 class="anchored" data-anchor-id="controle-de-versão-com-git">Controle de versão com Git</h2>
+<p>No VS Code, um clique rápido em um arquivo listado no painel do Git permite inspecionar instantaneamente as alterações no código (<a href="#fig-github" class="quarto-xref">Figure&nbsp;<span>4.5</span></a>). Ao abrir o arquivo, uma tela dividida é exibida, destacando as alterações em verde (edições) e vermelho (revisões), em comparação com a versão anterior do código. Essa funcionalidade facilita o processo de revisão, oferecendo uma maneira intuitiva e eficiente de acompanhar as modificações no ambiente de desenvolvimento.</p>
+<div id="fig-github" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-github-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/githubComparison.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-github-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.5: O VS Code se integra perfeitamente ao GitHub, tornando-se amigável mesmo para usuários com pouca experiência, exigindo apenas uma curva de aprendizado leve.
+</figcaption>
+</figure>
+</div>
+<p>O VS Code oferece uma variedade de recursos e extensões para facilitar a resolução de conflitos. Isso inclui ferramentas interativas de mesclagem, comparação de arquivos lado a lado e até suporte nativo a mesclagem em três vias. Podemos gerenciar o controle de versão com Git por meio de simples cliques de botão.</p>
+</section>
+<section id="exportar-banco-de-dados-.json" class="level2">
+<h2 class="anchored" data-anchor-id="exportar-banco-de-dados-.json">Exportar banco de dados .json</h2>
+<p>Para exportar todos os táxons dentro de <code>./taxon/Mimosa</code>:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> export <span class="at">--genus</span> Mimosa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="https://media.giphy.com/media/GKCQ1NTHrsGHaGCu07/giphy.gif" class="img-fluid"></p>
+<p>Para exportar apenas alguns táxons listados em <code>./input/taxonToImport.csv</code>, use:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> export <span class="at">--genus</span> Mimosa <span class="at">--load</span> csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O arquivo gerado será salvo em <code>./output/</code> com o nome <code>${genus}DB.json</code>.</p>
+<p><strong>Erros podem ocorrer em dois momentos:</strong></p>
+<ul>
+<li>Durante a <strong>compilação (TS)</strong>: como propriedades incorretas (ex: <code>ractole</code> em vez de <code>bracteole</code>)</li>
+<li>Durante a <strong>execução (JS)</strong>: como regras de negócio violadas (ex: <code>min = 5</code> e <code>max = 3</code>)</li>
+</ul>
+<p>Sobre os erros de compilação, por exemplo, dois problemas foram encontrados nos arquivos <code>Mimosa_test.ts</code> e <code>Mimosa_test2.ts</code> durante a tentativa de exportar o banco de dados de <em>Mimosa</em> (<a href="#fig-compilationEr" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>). No script <code>Mimosa_test.ts</code>, foi detectada uma propriedade não declarada para a face adaxial do folíolo. Já no script <code>Mimosa_test2.ts</code>, a classe <code>ractole</code> foi listada como uma propriedade da flor, mas a mensagem de erro sugere a correção para <code>bracteole</code>. Veja abaixo:</p>
+<div id="fig-compilationEr" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-compilationEr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/exportCompilationError.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-compilationEr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.6: Erros ocorridos durante o processo de transpilação de arquivos .ts para .js decorrem de violações de regras de sintaxe estabelecidas ou inconsistências de tipos no código TypeScript. Essas violações incluem erros de sintaxe, tipagem incorreta ou uso inadequado de recursos da linguagem TypeScript. Cada mensagem de erro fornece detalhes específicos que ajudam na identificação e resolução do problema encontrado.
+</figcaption>
+</figure>
+</div>
+<p>Além disso, erros podem ser capturados durante a fase de execução. No exemplo abaixo, o comprimento de uma estípula foi definido com valor mínimo igual a <code>5</code> e máximo igual a <code>3</code>, utilizando o método <code>.setHeightMinMax()</code> (<a href="#fig-executionEr" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>). Esse tipo de erro não é detectado na compilação, pois o tipo (<code>number</code>) está correto, mas, durante a execução, uma mensagem no terminal informa que “a altura mínima deve ser menor que a altura máxima”. Veja abaixo:</p>
+<div id="fig-executionEr" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-executionEr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/exportExecutionError.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-executionEr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.7: Erros derivados da compilação de arquivos .js evitam erros em tempo de execução, aplicando as regras de negócio definidas em cada método de classe. Neste exemplo, apesar de não haver violação de tipo de dado — já que a função aceita dois números —, existe uma regra de negócio para validar se o valor mínimo é realmente menor que o valor máximo. Esse processo evita erros de inserção de dados, garantindo conformidade com as regras definidas.
+</figcaption>
+</figure>
+</div>
+<section id="conjunto-de-dados-de-fontes" class="level3">
+<h3 class="anchored" data-anchor-id="conjunto-de-dados-de-fontes">Conjunto de dados de fontes</h3>
+<p>Podemos criar um conjunto de dados consolidado que reúne todas as fontes em uma estrutura JSON achatada, facilitando o acesso por meio de consultas. Para gerar um banco de dados contendo apenas as fontes relacionadas aos táxons, execute o seguinte comando:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> exportSources <span class="at">--genus</span> Mimosa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este conjunto de dados inclui um índice que se relaciona com o banco de dados principal e fornece o caminho completo da chave onde cada fonte está localizada:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>[{</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    index<span class="op">:</span> <span class="dv">7</span><span class="op">,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    path<span class="op">:</span> <span class="st">'flower.corolla.trichomes.stellate.lepidote'</span><span class="op">,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    source<span class="op">:</span> {</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>      sourceType<span class="op">:</span> <span class="st">'article'</span><span class="op">,</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>      authorship<span class="op">:</span> <span class="st">'Jordão, L.S.B. &amp; Morim, M.P. &amp; Baumgratz, J.F.A.'</span><span class="op">,</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>      year<span class="op">:</span> <span class="dv">2020</span><span class="op">,</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>      title<span class="op">:</span> <span class="st">'Trichomes in *Mimosa* (Leguminosae): Towards a characterization and a terminology standardization'</span><span class="op">,</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>      journal<span class="op">:</span> <span class="st">'Flora'</span><span class="op">,</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>      number<span class="op">:</span> <span class="dv">272</span><span class="op">,</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>      pages<span class="op">:</span> <span class="dv">151702</span><span class="op">,</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>      figure<span class="op">:</span> <span class="st">'4I'</span><span class="op">,</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>      obtainingMethod<span class="op">:</span> <span class="st">'scanningElectronMicroscope'</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>}]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="exportar-banco-de-dados-.csv" class="level2">
+<h2 class="anchored" data-anchor-id="exportar-banco-de-dados-.csv">Exportar banco de dados .csv</h2>
+<p>No TTS, existe um método conveniente para exportar um banco de dados convertido em JSON para o formato CSV usando o comando <code>exportToCsv</code>. Semelhante ao comando <code>export</code>, ele gera uma saída em CSV. De fato, abrir um arquivo CSV em uma planilha é bastante útil. No entanto, é importante observar que essa conversão implica em perda de estrutura dos dados. A primeira linha do CSV será composta por todos os caminhos JSON, preservando a hierarquia aninhada, mas arrays de elementos serão tratados como strings com a mesma sintaxe JSON. Para transformações mais avançadas, é possível explorar métodos adicionais no <a href="https://mircozeiss.com/json2csv/">Json2csv</a>.</p>
+</section>
+<section id="navegando-no-banco-de-dados" class="level2">
+<h2 class="anchored" data-anchor-id="navegando-no-banco-de-dados">Navegando no banco de dados</h2>
+<p>Utilizando a extensão JSON Grid Viewer (<a href="https://github.com/dutchigor/json-grid-viewer">https://github.com/dutchigor/json-grid-viewer</a>), disponível no Visual Studio Marketplace (<a href="https://marketplace.visualstudio.com/">https://marketplace.visualstudio.com/</a>), podemos explorar facilmente a estrutura detalhada de configurações JSON (<a href="#fig-jsonView" class="quarto-xref">Figure&nbsp;<span>4.8</span></a>).</p>
+<div id="fig-jsonView" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-jsonView-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/jsonView.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jsonView-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma visualização amigável de arquivos JSON. Seu foco principal é visualizar objetos e arrays, que são componentes típicos de uma estrutura JSON.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="métodos-de-consulta" class="level2">
+<h2 class="anchored" data-anchor-id="métodos-de-consulta">Métodos de consulta</h2>
+<p>As técnicas de consulta de dados abrangem uma variedade de métodos adaptados a diferentes necessidades. As consultas básicas baseiam-se em pares chave-valor para recuperação precisa de dados, enquanto as consultas por intervalo são ideais para dados numéricos ou baseados em datas, permitindo a extração dentro de faixas de valores definidas.</p>
+<p>Outro tipo de consulta envolve a abordagem de agregação, que permite manipulação avançada de dados, como agrupamento e filtragem encadeada no banco de dados. Isso é possível porque o resultado de uma consulta sempre retorna o documento completo dentro do banco, permitindo encadear novas consultas para realizar múltiplas agregações.</p>
+<section id="consulta-por-caminho-de-caractere" class="level3">
+<h3 class="anchored" data-anchor-id="consulta-por-caminho-de-caractere">Consulta por caminho de caractere</h3>
+<p>Um aspecto essencial das consultas é identificar um caminho JSON que represente propriedades aninhadas em um array de documentos em um banco de dados JSON. Neste caso, nosso objetivo é navegar pela árvore de caracteres para recuperar propriedades dos táxons.</p>
+<p>Vamos definir “propriedade” como um caminho de chaves dentro da árvore de caracteres. Quando queremos recuperar uma propriedade do banco, buscamos seu caminho JSON correspondente, como <code>trichomes.stellate</code>. Esta busca retorna os índices dos documentos onde a propriedade foi encontrada e os caminhos em que ela se localiza, usando o comando <code>findProperty</code>:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> findProperty <span class="at">--property</span> trichomes.stellate <span class="at">--genus</span> Mimosa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O resultado deve ser similar a:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>[</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  { specificEpithet<span class="op">:</span> <span class="st">'furfuraceae'</span><span class="op">,</span> index<span class="op">:</span> <span class="dv">5</span><span class="op">,</span> paths<span class="op">:</span> [ <span class="st">'flower.corolla'</span> ] }<span class="op">,</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  { specificEpithet<span class="op">:</span> <span class="st">'myuros'</span><span class="op">,</span> index<span class="op">:</span> <span class="dv">6</span><span class="op">,</span> paths<span class="op">:</span> [ <span class="st">'stems'</span> ] }<span class="op">,</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    specificEpithet<span class="op">:</span> <span class="st">'schomburgkii'</span><span class="op">,</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    index<span class="op">:</span> <span class="dv">7</span><span class="op">,</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    paths<span class="op">:</span> [ </span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'leaf.bipinnate.pinnae.leaflet.abaxial'</span><span class="op">,</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'flower.corolla'</span> </span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>No exemplo acima, tricomas estrelados foram identificados na corola de <em>M. furfuraceae</em>, nos caules de <em>M. myuros</em> e tanto na face abaxial do folíolo quanto na corola de <em>M. schomburgkii</em>.</p>
+</section>
+<section id="consulta-flexível-chave-valor" class="level3">
+<h3 class="anchored" data-anchor-id="consulta-flexível-chave-valor">Consulta flexível chave-valor</h3>
+<p>Outra abordagem de consulta é a chave-valor flexível. Esse método permite buscas dentro de caminhos JSON usando valores específicos que atendam a condições definidas.</p>
+<p>Para iniciar consultas em uma exportação do projeto TTS, execute os procedimentos fora do diretório do projeto. Comece criando um diretório separado (ex: <code>flex-json-searches</code>) e abra-o em um IDE como o VS Code.</p>
+<p>Para realizar consultas JSON flexíveis, instale os módulos <code>flex-json-searcher</code> (<a href="https://github.com/vicentecalfo/flex-json-searcher">https://github.com/vicentecalfo/flex-json-searcher</a>) e <code>fs</code>. No terminal, execute:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install fs</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install flex-json-searcher</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Depois, crie um arquivo <code>script.js</code> e insira o seguinte código:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">// script.js</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> fs <span class="op">=</span> <span class="pp">require</span>(<span class="st">'fs'</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> { FJS } <span class="op">=</span> <span class="pp">require</span>(<span class="st">'flex-json-searcher'</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> filePath <span class="op">=</span> <span class="st">'./output/MimosaDB.json'</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>fs<span class="op">.</span><span class="fu">readFile</span>(filePath<span class="op">,</span> <span class="st">'utf8'</span><span class="op">,</span> <span class="kw">async</span> (err<span class="op">,</span> data) <span class="kw">=&gt;</span> {</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (err) {</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro ao ler o arquivo:'</span><span class="op">,</span> err)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> {</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> mimosaDB <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(data)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> fjs <span class="op">=</span> <span class="kw">new</span> <span class="fu">FJS</span>(mimosaDB)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> query <span class="op">=</span> { <span class="st">'flower.merism'</span><span class="op">:</span> { $eq<span class="op">:</span> <span class="st">"3-merous"</span> } }</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> output <span class="op">=</span> <span class="cf">await</span> fjs<span class="op">.</span><span class="fu">search</span>(query)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> specificEpithets <span class="op">=</span> output<span class="op">.</span><span class="at">result</span><span class="op">.</span><span class="fu">map</span>(item <span class="kw">=&gt;</span> item<span class="op">.</span><span class="at">specificEpithet</span>)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'Espécies encontradas:'</span><span class="op">,</span> specificEpithets)</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro durante o processamento:'</span><span class="op">,</span> error)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Execute com:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Resultado esperado:</p>
+<pre><code>Espécies encontradas: [
+  'afranioi',
+  'caesalpiniifolia',
+  'ceratonia var pseudo-obovata',
+  'robsonii'
+]</code></pre>
+<p>Durante a busca, <code>*.</code> pode ser usado para localizar caminhos JSON específicos associados a condições.</p>
+</section>
+<section id="consulta-por-intervalo" class="level3">
+<h3 class="anchored" data-anchor-id="consulta-por-intervalo">Consulta por intervalo</h3>
+<p>A consulta por intervalo permite buscar dados dentro de faixas específicas de valores, como datas, valores numéricos ou outros atributos.</p>
+<p>Instale os módulos:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install fs</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install flex-json-searcher</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Crie o arquivo <code>script2.js</code>:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">// script2.js</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> fs <span class="op">=</span> <span class="pp">require</span>(<span class="st">'fs'</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> { FJS } <span class="op">=</span> <span class="pp">require</span>(<span class="st">'flex-json-searcher'</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> filePath <span class="op">=</span> <span class="st">'./output/MimosaDB.json'</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>fs<span class="op">.</span><span class="fu">readFile</span>(filePath<span class="op">,</span> <span class="st">'utf8'</span><span class="op">,</span> <span class="kw">async</span> (err<span class="op">,</span> data) <span class="kw">=&gt;</span> {</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (err) {</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro ao ler o arquivo:'</span><span class="op">,</span> err)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> {</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> mimosaDB <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(data)</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> fjs <span class="op">=</span> <span class="kw">new</span> <span class="fu">FJS</span>(mimosaDB)</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> query <span class="op">=</span> { <span class="st">'leaf.bipinnate.pinnae.leaflet.numberOfPairs.min'</span><span class="op">:</span> { $gt<span class="op">:</span> <span class="st">"15"</span> } }</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> output <span class="op">=</span> <span class="cf">await</span> fjs<span class="op">.</span><span class="fu">search</span>(query)</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> specificEpithets <span class="op">=</span> output<span class="op">.</span><span class="at">result</span><span class="op">.</span><span class="fu">map</span>(item <span class="kw">=&gt;</span> item<span class="op">.</span><span class="at">specificEpithet</span>)</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'Espécies encontradas:'</span><span class="op">,</span> specificEpithets)</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro durante o processamento:'</span><span class="op">,</span> error)</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Execute com:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Resultado:</p>
+<pre><code>Espécies encontradas: [
+  'bimucronata',
+  'bocainae',
+  'dryandroides var. dryandroides',
+  'elliptica',
+  'invisa var. macrostachya',
+  'itatiaiensis',
+  'pilulifera var. pseudincana'
+]</code></pre>
+<p>Para consultas com condições duplas (ex: maior que 15 e menor que 20), crie <code>script3.js</code>:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">// script3.js</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> fs <span class="op">=</span> <span class="pp">require</span>(<span class="st">'fs'</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> { FJS } <span class="op">=</span> <span class="pp">require</span>(<span class="st">'flex-json-searcher'</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> filePath <span class="op">=</span> <span class="st">'./output/MimosaDB.json'</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>fs<span class="op">.</span><span class="fu">readFile</span>(filePath<span class="op">,</span> <span class="st">'utf8'</span><span class="op">,</span> <span class="kw">async</span> (err<span class="op">,</span> data) <span class="kw">=&gt;</span> {</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (err) {</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro ao ler o arquivo:'</span><span class="op">,</span> err)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> {</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> mimosaDB <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(data)</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> fjs <span class="op">=</span> <span class="kw">new</span> <span class="fu">FJS</span>(mimosaDB)</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> gt15Query <span class="op">=</span> { <span class="st">'leaf.bipinnate.pinnae.leaflet.numberOfPairs.min'</span><span class="op">:</span> { <span class="dt">$gt</span><span class="op">:</span> <span class="st">"15"</span> } }</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> gt15Output <span class="op">=</span> <span class="cf">await</span> fjs<span class="op">.</span><span class="fu">search</span>(gt15Query)</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> fjs2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">FJS</span>(gt15Output<span class="op">.</span><span class="at">result</span>)</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> lt20Query <span class="op">=</span> { <span class="st">'leaf.bipinnate.pinnae.leaflet.numberOfPairs.min'</span><span class="op">:</span> { <span class="dt">$lt</span><span class="op">:</span> <span class="st">"20"</span> } }</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> lt20Output <span class="op">=</span> <span class="cf">await</span> fjs2<span class="op">.</span><span class="fu">search</span>(lt20Query)</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> results <span class="op">=</span> lt20Output<span class="op">.</span><span class="at">result</span><span class="op">.</span><span class="fu">map</span>(item <span class="kw">=&gt;</span> item<span class="op">.</span><span class="at">specificEpithet</span>)</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'Espécies com entre 15 e 20 pares de folíolos:'</span><span class="op">,</span> results)</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro durante o processamento:'</span><span class="op">,</span> error)</span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Execute com:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Resultado:</p>
+<pre><code>Espécies com entre 15 e 20 pares de folíolos:
+ [ 'bimucronata', 'itatiaiensis', 'pilulifera var. pseudincana' ]</code></pre>
+</section>
+<section id="consulta-de-fontes" class="level3">
+<h3 class="anchored" data-anchor-id="consulta-de-fontes">Consulta de fontes</h3>
+<p>Para consultar imagens obtidas por microscópio eletrônico, crie <code>script4.js</code>:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">// script4.js</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> fs <span class="op">=</span> <span class="pp">require</span>(<span class="st">'fs'</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> { FJS } <span class="op">=</span> <span class="pp">require</span>(<span class="st">'flex-json-searcher'</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> filePath <span class="op">=</span> <span class="st">'./output/MimosaSourcesDB.json'</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>fs<span class="op">.</span><span class="fu">readFile</span>(filePath<span class="op">,</span> <span class="st">'utf8'</span><span class="op">,</span> <span class="kw">async</span> (err<span class="op">,</span> data) <span class="kw">=&gt;</span> {</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (err) {</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro ao ler o arquivo:'</span><span class="op">,</span> err)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> {</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> mimosaSourcesDB <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(data)</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> fjs <span class="op">=</span> <span class="kw">new</span> <span class="fu">FJS</span>(mimosaSourcesDB)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> query <span class="op">=</span> { <span class="st">'source.obtainingMethod'</span><span class="op">:</span> { $eq<span class="op">:</span> <span class="st">"photo"</span> } }</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> output <span class="op">=</span> <span class="cf">await</span> fjs<span class="op">.</span><span class="fu">search</span>(query)</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(output<span class="op">.</span><span class="at">result</span>)</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro durante o processamento:'</span><span class="op">,</span> error)</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Execute com:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Resultado:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>[</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    index<span class="op">:</span> <span class="st">'0'</span><span class="op">,</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    path<span class="op">:</span> <span class="st">''</span><span class="op">,</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    specificEpithet<span class="op">:</span> <span class="st">'afranioi'</span><span class="op">,</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    source<span class="op">:</span> {</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>      obraPrinceps<span class="op">:</span> <span class="st">'yes'</span><span class="op">,</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>      sourceType<span class="op">:</span> <span class="st">'article'</span><span class="op">,</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>      authorship<span class="op">:</span> <span class="st">'Jordão, L.S.B. and Morim, M.P. and Simon, M.F., Dutra, V.F. and Baumgratz, J.F.A.'</span><span class="op">,</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>      year<span class="op">:</span> <span class="dv">2021</span><span class="op">,</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>      title<span class="op">:</span> <span class="st">'New Species of *Mimosa* (Leguminosae) from Brazil'</span><span class="op">,</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>      journal<span class="op">:</span> <span class="st">'Systematic Botany'</span><span class="op">,</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>      volume<span class="op">:</span> <span class="dv">46</span><span class="op">,</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>      number<span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>      pages<span class="op">:</span> <span class="st">'339-351'</span><span class="op">,</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>      figure<span class="op">:</span> <span class="st">'3'</span><span class="op">,</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>      obtainingMethod<span class="op">:</span> <span class="st">'photo'</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>    index<span class="op">:</span> <span class="st">'17'</span><span class="op">,</span></span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As informações completas de cada fonte estão facilmente acessíveis, como <code>sourceType</code> (tipo de fonte), <code>journal</code> (periódico), <code>figure</code> (figura) e <code>authorship</code> (autoria).</p>
+</section>
+<section id="outras-aplicações-de-consulta" class="level3">
+<h3 class="anchored" data-anchor-id="outras-aplicações-de-consulta">Outras aplicações de consulta</h3>
+<p>O MongoDB e sua ferramenta complementar, o MongoDB Compass, oferecem capacidades avançadas de consulta (<a href="#fig-mongodb" class="quarto-xref">Figure&nbsp;<span>4.9</span></a>). A linguagem de consulta do MongoDB, fortalecida por métodos como <code>find()</code> e um conjunto abrangente de operadores de comparação como <code>$lt</code> (menor que), <code>$gt</code> (maior que) e <code>$eq</code> (igual a), permite a filtragem precisa de documentos com base em critérios específicos. O MongoDB Compass, uma interface gráfica para o MongoDB, oferece uma plataforma intuitiva para construir e executar consultas visualmente. Ele simplifica a criação de consultas, a visualização de dados e a otimização, oferecendo uma representação gráfica amigável das estruturas de dados. Aproveitar o poder de consulta do MongoDB juntamente com a interface interativa do Compass permite que os usuários explorem, recuperem e manipulem dados de maneira eficaz em bancos de dados MongoDB.</p>
+<div id="fig-mongodb" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mongodb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/mongoMimosaDB.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mongodb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.9: O MongoDB Compass oferece uma estrutura robusta para visualizar e investigar bancos de dados orientados a documentos, permitindo consultas poderosas.
+</figcaption>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./diretrizes.html" class="pagination-link" aria-label="Diretrizes Padrão">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Diretrizes Padrão</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chamado.html" class="pagination-link" aria-label="Chamada à ação">
+        <span class="nav-page-text"><span class="chapter-title">Chamada à ação</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+
+</body></html>
