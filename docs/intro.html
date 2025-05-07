@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.22">
@@ -59,10 +59,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-a5cd134f9b40a21b85be3e62cd27a8fe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-9080cd1872618827307f6bc34f81b6b8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-32d3c918484c9f49d94f37e56798127d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,17 +79,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NY1CF9TG2M"></script>
@@ -99,6 +101,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 <script src="nav-arrows.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -111,13 +114,13 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-title">Introdução</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -130,11 +133,14 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Introdução ao <img src="images/logo.jpg" class="img-fluid" style="width:50.0%"></a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -191,6 +197,165 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+<script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    window.setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        disableStylesheet(primaryStylesheets)
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      window.setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    window.hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(darkModeDefault) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const darkModeDefault = false;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !window.hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+    };
+    // Switch to dark mode if need be
+    if (window.hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -211,8 +376,8 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
 </header>
 
 
-<p>O esforço de descrever e catalogar organismos atravessa gerações, contribuindo de forma significativa para os alicerces do conhecimento biológico e da classificação dos seres vivos. Enraizada na literatura científica histórica, a prática de representar organismos por meio de descrições textuais atua como uma ponte entre as comunidades científicas do passado e do presente <span class="citation" data-cites="Winston1999 Morim2015">(<a href="references.html#ref-Winston1999" role="doc-biblioref">Winston 1999</a>; <a href="references.html#ref-Morim2015" role="doc-biblioref">Morim and Lughadha 2015</a>)</span>. Com o advento da era digital, métodos tradicionais se entrelaçam com as tecnologias contemporâneas <span class="citation" data-cites="Morim2015 Silva2017">(<a href="references.html#ref-Morim2015" role="doc-biblioref">Morim and Lughadha 2015</a>; <a href="references.html#ref-Silva2017" role="doc-biblioref">Silva 2017</a>)</span>.</p>
-<p>Atualmente, taxonomistas e sistematas recorrem frequentemente a editores de texto familiares, como o Microsoft (MS) Word, para elaborar meticulosamente suas descrições. Alguns profissionais também utilizam planilhas eletrônicas para estruturar dados <span class="citation" data-cites="Sarkar2008">(<a href="references.html#ref-Sarkar2008" role="doc-biblioref">Sarkar, Schenk, and Norton 2008</a>)</span>, porém os avanços tecnológicos têm aberto novas possibilidades para a documentação e organização da informação.</p>
+<p>O esforço de descrever e catalogar organismos atravessa gerações, contribuindo de forma significativa para os alicerces do conhecimento biológico e da classificação dos seres vivos. Enraizada na literatura científica histórica, a prática de representar organismos por meio de descrições textuais atua como uma ponte entre as comunidades científicas do passado e do presente <span class="citation" data-cites="Winston1999 Morim2015">(<a href="references.html#ref-Winston1999" role="doc-biblioref">Winston 1999</a>; <a href="references.html#ref-Morim2015" role="doc-biblioref">Morim e Lughadha 2015</a>)</span>. Com o advento da era digital, métodos tradicionais se entrelaçam com as tecnologias contemporâneas <span class="citation" data-cites="Morim2015 Silva2017">(<a href="references.html#ref-Morim2015" role="doc-biblioref">Morim e Lughadha 2015</a>; <a href="references.html#ref-Silva2017" role="doc-biblioref">Silva 2017</a>)</span>.</p>
+<p>Atualmente, taxonomistas e sistematas recorrem frequentemente a editores de texto familiares, como o Microsoft (MS) Word, para elaborar meticulosamente suas descrições. Alguns profissionais também utilizam planilhas eletrônicas para estruturar dados <span class="citation" data-cites="Sarkar2008">(<a href="references.html#ref-Sarkar2008" role="doc-biblioref">Sarkar, Schenk, e Norton 2008</a>)</span>, porém os avanços tecnológicos têm aberto novas possibilidades para a documentação e organização da informação.</p>
 <p>Nesse cenário em constante transformação, surgem oportunidades ainda pouco exploradas por meio de metodologias inovadoras. Apesar de as ferramentas digitais já terem agilizado diversas etapas da pesquisa, ainda existe um descompasso notável entre essas soluções contemporâneas e sua ampla adoção pela comunidade científica. É nesse contexto que esta proposta explora a relação sinérgica entre a Programação Orientada a Objetos (POO) e os Bancos de Dados Orientados a Documentos (DOD). Sob essa ótica, vislumbramos uma mudança de paradigma que pode impulsionar a pesquisa em biodiversidade rumo a uma era de maior eficiência, colaboração e inovação.</p>
 <p>O <a href="https://www.typescriptlang.org/pt/">TypeScript (TS)</a>, uma extensão do JavaScript (JS, <a href="https://ecma-international.org/">Ecma</a>), representa uma escolha robusta para o desenvolvimento de sistemas complexos e bem organizados <span class="citation" data-cites="Typescript2023">(<a href="references.html#ref-Typescript2023" role="doc-biblioref">Microsoft Corporation 2023</a>)</span>. A combinação dos princípios da POO com o TS estabelece um ecossistema de desenvolvimento poderoso, que viabiliza a construção de bancos de dados no formato <a href="https://www.json.org/json-pt.html">JavaScript Object Notation (JSON)</a>, além de permitir a aplicação de múltiplas camadas de validação de dados, resultando em uma base de dados altamente confiável.</p>
 <p>O formato JSON se destaca nos DODs pela sua capacidade de estruturar dados de maneira versátil <span class="citation" data-cites="JsonSchema2023">(<a href="references.html#ref-JsonSchema2023" role="doc-biblioref">JSON Schema 2023</a>)</span>. Diferente das planilhas eletrônicas, sua flexibilidade e hierarquia permitem acomodar diversos tipos de informação, sendo ideal para representar dados biológicos e anotações complexas. Essa estrutura é particularmente adequada para áreas como sistemática, química, ecologia, reprodução, genômica e proteômica, cujas informações frequentemente se organizam melhor em hierarquias aninhadas.</p>
@@ -224,13 +389,13 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Ashburner2000" class="csl-entry" role="listitem">
-Ashburner, Michael, Catherine A. Ball, Judith A. Blake, David Botstein, Heather Butler, J. Michael Cherry, Allan P. Davis, et al. 2000. <span>“Gene Ontology: Tool for the Unification of Biology.”</span> <em>Nat Genet</em> 25 (1): 25–29. <a href="https://doi.org/10.1038/75556">https://doi.org/10.1038/75556</a>.
+Ashburner, Michael, Catherine A. Ball, Judith A. Blake, David Botstein, Heather Butler, J. Michael Cherry, Allan P. Davis, et al. 2000. <span>«Gene Ontology: tool for the unification of biology»</span>. <em>Nat Genet</em> 25 (1): 25–29. <a href="https://doi.org/10.1038/75556">https://doi.org/10.1038/75556</a>.
 </div>
 <div id="ref-Cooper2012" class="csl-entry" role="listitem">
-Cooper, Laurel, Ramona L. Walls, Justin Elser, Maria A. Gandolfo, Dennis W. Stevenson, Barry Smith, Justin Preece, et al. 2012. <span>“The Plant Ontology as a Tool for Comparative Plant Anatomy and Genomic Analyses.”</span> <em>Plant and Cell Physiology</em> 54 (2): e1–1. <a href="https://doi.org/10.1093/pcp/pcs163">https://doi.org/10.1093/pcp/pcs163</a>.
+Cooper, Laurel, Ramona L. Walls, Justin Elser, Maria A. Gandolfo, Dennis W. Stevenson, Barry Smith, Justin Preece, et al. 2012. <span>«The Plant Ontology as a Tool for Comparative Plant Anatomy and Genomic Analyses»</span>. <em>Plant and Cell Physiology</em> 54 (2): e1–1. <a href="https://doi.org/10.1093/pcp/pcs163">https://doi.org/10.1093/pcp/pcs163</a>.
 </div>
 <div id="ref-Gene_Ontology_Consortium2023" class="csl-entry" role="listitem">
-Gene Ontology Consortium, Suzi A Aleksander, James Balhoff, Seth Carbon, J Michael Cherry, Harold J Drabkin, Dustin Ebert, et al. 2023. <span>“The Gene Ontology Knowledgebase in 2023.”</span> <em>Genetics</em> 224 (1). <a href="https://doi.org/10.1093/genetics/iyad031">https://doi.org/10.1093/genetics/iyad031</a>.
+Gene Ontology Consortium, Suzi A Aleksander, James Balhoff, Seth Carbon, J Michael Cherry, Harold J Drabkin, Dustin Ebert, et al. 2023. <span>«The Gene Ontology knowledgebase in 2023»</span>. <em>Genetics</em> 224 (1). <a href="https://doi.org/10.1093/genetics/iyad031">https://doi.org/10.1093/genetics/iyad031</a>.
 </div>
 <div id="ref-JsonSchema2023" class="csl-entry" role="listitem">
 JSON Schema. 2023. <em>TypeScript</em>. JSON Schema. <a href="https://www.json.org/json-pt.html">https://www.json.org/json-pt.html</a>.
@@ -239,19 +404,19 @@ JSON Schema. 2023. <em>TypeScript</em>. JSON Schema. <a href="https://www.json.o
 Microsoft Corporation. 2023. <em>TypeScript</em>. Microsoft. <a href="https://www.typescriptlang.org/">https://www.typescriptlang.org/</a>.
 </div>
 <div id="ref-Morim2015" class="csl-entry" role="listitem">
-Morim, Marli Pires, and Eimear M. Nic Lughadha. 2015. <span>“Flora of Brazil Online: Can Brazil<span></span>s Botanists Achieve Their 2020 Vision?”</span> <em>Rodriguesia</em> 66 (4): 1115–35. <a href="https://doi.org/10.1590/2175-7860201566412">https://doi.org/10.1590/2175-7860201566412</a>.
+Morim, Marli Pires, e Eimear M. Nic Lughadha. 2015. <span>«Flora of Brazil Online: Can Brazil<span></span>s botanists achieve their 2020 vision?»</span> <em>Rodriguesia</em> 66 (4): 1115–35. <a href="https://doi.org/10.1590/2175-7860201566412">https://doi.org/10.1590/2175-7860201566412</a>.
 </div>
 <div id="ref-Perkel2016" class="csl-entry" role="listitem">
-Perkel, Jeffrey. 2016. <span>“Democratic Databases: Science on <span>GitHub</span>.”</span> <em>Nature</em> 538 (7623): 127–28. <a href="https://doi.org/10.1038/538127a">https://doi.org/10.1038/538127a</a>.
+Perkel, Jeffrey. 2016. <span>«Democratic databases: science on <span>GitHub</span>»</span>. <em>Nature</em> 538 (7623): 127–28. <a href="https://doi.org/10.1038/538127a">https://doi.org/10.1038/538127a</a>.
 </div>
 <div id="ref-Sarkar2008" class="csl-entry" role="listitem">
-Sarkar, Indra, Ryan Schenk, and Catherine N Norton. 2008. <span>“Exploring Historical Trends Using Taxonomic Name Metadata.”</span> <em><span>BMC</span> Evol Biol</em> 8 (1): 144. <a href="https://doi.org/10.1186/1471-2148-8-144">https://doi.org/10.1186/1471-2148-8-144</a>.
+Sarkar, Indra, Ryan Schenk, e Catherine N Norton. 2008. <span>«Exploring historical trends using taxonomic name metadata»</span>. <em><span>BMC</span> Evol Biol</em> 8 (1): 144. <a href="https://doi.org/10.1186/1471-2148-8-144">https://doi.org/10.1186/1471-2148-8-144</a>.
 </div>
 <div id="ref-Silva2017" class="csl-entry" role="listitem">
-Silva, Thiago Sanches Ranzani da. 2017. <span>“Species Descriptions and Digital Environments: Alternatives for Accessibility of Morphological Data.”</span> <em>Rev Bras Entomol</em> 61 (4): 277–81. <a href="https://doi.org/10.1016/j.rbe.2017.06.005">https://doi.org/10.1016/j.rbe.2017.06.005</a>.
+Silva, Thiago Sanches Ranzani da. 2017. <span>«Species descriptions and digital environments: alternatives for accessibility of morphological data»</span>. <em>Rev Bras Entomol</em> 61 (4): 277–81. <a href="https://doi.org/10.1016/j.rbe.2017.06.005">https://doi.org/10.1016/j.rbe.2017.06.005</a>.
 </div>
 <div id="ref-Walls2012" class="csl-entry" role="listitem">
-Walls, Ramona L., Balaji Athreya, Laurel Cooper, Justin Elser, Maria A. Gandolfo, Pankaj Jaiswal, Christopher J. Mungall, et al. 2012. <span>“Ontologies as Integrative Tools for Plant Science.”</span> <em>American Journal of Botany</em> 99 (8): 1263–75. <a href="https://doi.org/10.3732/ajb.1200222">https://doi.org/10.3732/ajb.1200222</a>.
+Walls, Ramona L., Balaji Athreya, Laurel Cooper, Justin Elser, Maria A. Gandolfo, Pankaj Jaiswal, Christopher J. Mungall, et al. 2012. <span>«Ontologies as integrative tools for plant science»</span>. <em>American Journal of Botany</em> 99 (8): 1263–75. <a href="https://doi.org/10.3732/ajb.1200222">https://doi.org/10.3732/ajb.1200222</a>.
 </div>
 <div id="ref-Winston1999" class="csl-entry" role="listitem">
 Winston, Judith E. 1999. <em>Describing Species: Practical Taxonomic Procedure for Biologists</em>. Columbia University Press. <a href="http://www.jstor.org/stable/10.7312/wins06824">http://www.jstor.org/stable/10.7312/wins06824</a>.
@@ -261,6 +426,19 @@ Winston, Judith E. 1999. <em>Describing Species: Practical Taxonomic Procedure f
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    window.setColorSchemeToggle(window.hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -284,12 +462,12 @@ Winston, Judith E. 1999. <em>Describing Species: Practical Taxonomic Procedure f
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -679,4 +857,5 @@ Winston, Judith E. 1999. <em>Describing Species: Practical Taxonomic Procedure f
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

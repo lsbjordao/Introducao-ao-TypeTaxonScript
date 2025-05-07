@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.22">
@@ -74,10 +74,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-a5cd134f9b40a21b85be3e62cd27a8fe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-9080cd1872618827307f6bc34f81b6b8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-32d3c918484c9f49d94f37e56798127d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,17 +94,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NY1CF9TG2M"></script>
@@ -114,6 +116,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 <script src="nav-arrows.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -126,13 +129,13 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorial.html"><span class="chapter-title">Tutorial</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -145,11 +148,14 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Introdução ao <img src="images/logo.jpg" class="img-fluid" style="width:50.0%"></a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -203,7 +209,7 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Índice</h2>
    
   <ul>
   <li><a href="#instalar-o-node.js" id="toc-instalar-o-node.js" class="nav-link active" data-scroll-target="#instalar-o-node.js">Instalar o Node.js</a></li>
@@ -240,6 +246,165 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+<script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    window.setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        disableStylesheet(primaryStylesheets)
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      window.setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    window.hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(darkModeDefault) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const darkModeDefault = false;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !window.hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+    };
+    // Switch to dark mode if need be
+    if (window.hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -295,34 +460,34 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
 <li>Vá ao menu superior e clique em <em>Terminal</em> → <em>Novo Terminal</em>.</li>
 <li>Digite e execute:</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> type-taxon-script</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> type-taxon-script</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Instale com a flag <code>-g</code> para evitar que dependências sejam criadas dentro do diretório do projeto. Caso contrário, será gerada uma pasta <code>./node_modules</code> e um arquivo <code>package.json</code> localmente.</p>
 <p>Para verificar se a instalação foi bem-sucedida, use:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> <span class="at">--version</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Para ver a ajuda com todos os comandos disponíveis:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> <span class="at">--help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> <span class="at">--help</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="desinstalar-o-pacote-tts" class="level2">
 <h2 class="anchored" data-anchor-id="desinstalar-o-pacote-tts">Desinstalar o pacote TTS</h2>
 <p>Para desinstalar o pacote TTS, use:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> uninstall <span class="at">-g</span> @lsbjordao/type-taxon-script</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> uninstall <span class="at">-g</span> @lsbjordao/type-taxon-script</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="inicializar-um-projeto-tts" class="level2">
 <h2 class="anchored" data-anchor-id="inicializar-um-projeto-tts">Inicializar um projeto TTS</h2>
 <p>Para iniciar um projeto TTS:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> init</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Esse comando verifica se há um projeto existente e cria os diretórios obrigatórios <code>./input</code> e <code>./output</code>, mas <strong>somente</strong> se as pastas <code>characters</code> e <code>taxon</code> já existirem.</p>
 </section>
 <section id="descrever-um-novo-táxon" class="level2">
 <h2 class="anchored" data-anchor-id="descrever-um-novo-táxon">Descrever um novo táxon</h2>
 <p>Para criar um novo arquivo <code>.ts</code> com a hierarquia completa de caracteres, use:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> new <span class="at">--genus</span> Mimosa <span class="at">--species</span> epithet</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> new <span class="at">--genus</span> Mimosa <span class="at">--species</span> epithet</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Um arquivo chamado <code>Mimosa_epithet.ts</code> será gerado no diretório <code>./output</code>. <strong>Antes de editar</strong>, mova esse arquivo para a pasta <code>./taxon</code>, pois o script só funciona corretamente dentro dela. Fora dessa pasta, ocorrerão erros de dependência.</p>
 </section>
 <section id="importar-de-um-arquivo-.csv" class="level2">
 <h2 class="anchored" data-anchor-id="importar-de-um-arquivo-.csv">Importar de um arquivo .csv</h2>
 <p>Também é possível importar dados de múltiplos táxons a partir de um <code>.csv</code>, com o comando:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> import <span class="at">--genus</span> Mimosa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> import <span class="at">--genus</span> Mimosa</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O arquivo <code>.csv</code> deve:</p>
 <ul>
 <li>Usar <code>;</code> como separador e <code>"</code> como delimitador de texto</li>
@@ -330,20 +495,20 @@ gtag('config', 'G-NY1CF9TG2M', { 'anonymize_ip': true});
 <li>Usar o caminho JSON completo como nome de cada coluna</li>
 </ul>
 <p>Para indicar múltiplos estados em uma célula, use:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[</span><span class="st">'4-merous'</span><span class="ex">,</span> <span class="st">'5-merous'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[</span><span class="st">'4-merous'</span><span class="ex">,</span> <span class="st">'5-merous'</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Para características que são objetos-chave (ex: tipos de inflorescência), crie colunas como <code>inflorescence.capitate</code> e insira <code>yes</code> na célula correspondente ao táxon.</p>
 <p>Os arquivos <code>.ts</code> gerados serão salvos em <code>./output</code>, mas devem ser movidos manualmente para <code>./taxon</code> para funcionar corretamente.</p>
 </section>
 <section id="documentação" class="level2">
 <h2 class="anchored" data-anchor-id="documentação">Documentação</h2>
-<p>Todos os elementos do código têm metadados (<a href="#fig-tsdoc" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>). Ao passar o cursor sobre eles no VS Code, as informações aparecem em um <em>popup</em>.</p>
+<p>Todos os elementos do código têm metadados (<a href="#fig-tsdoc" class="quarto-xref">Figura&nbsp;<span>4.1</span></a>). Ao passar o cursor sobre eles no VS Code, as informações aparecem em um <em>popup</em>.</p>
 <div id="fig-tsdoc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tsdoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./images/tsdoc.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tsdoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.1: Ao passar o cursor sobre um texto em uma IDE como o VS Code, um pop-up exibirá seus metadados.
+Figura&nbsp;4.1: Ao passar o cursor sobre um texto em uma IDE como o VS Code, um pop-up exibirá seus metadados.
 </figcaption>
 </figure>
 </div>
@@ -352,7 +517,7 @@ Figure&nbsp;4.1: Ao passar o cursor sobre um texto em uma IDE como o VS Code, um
 <h2 class="anchored" data-anchor-id="edição-de-táxons">Edição de táxons</h2>
 <p>Para editar um arquivo <code>.ts</code> de espécie:</p>
 <ul>
-<li>Digite <code>'</code> ou <code>"</code> após o sinal <code>=</code> para ver as opções de atributos (<a href="#fig-characters-options" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>)</li>
+<li>Digite <code>'</code> ou <code>"</code> após o sinal <code>=</code> para ver as opções de atributos (<a href="#fig-characters-options" class="quarto-xref">Figura&nbsp;<span>4.2</span></a>)</li>
 <li>Pressione <code>Enter</code> para confirmar</li>
 <li>O VS Code oferece autocompletar com os estados válidos de cada propriedade</li>
 </ul>
@@ -362,7 +527,7 @@ Figure&nbsp;4.1: Ao passar o cursor sobre um texto em uma IDE como o VS Code, um
 <img src="./images/characterOptions.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-characters-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.2: O VS Code auxilia com sua ferramenta de autocompletar, exibindo todos os estados permitidos para cada propriedade.
+Figura&nbsp;4.2: O VS Code auxilia com sua ferramenta de autocompletar, exibindo todos os estados permitidos para cada propriedade.
 </figcaption>
 </figure>
 </div>
@@ -374,14 +539,14 @@ Figure&nbsp;4.2: O VS Code auxilia com sua ferramenta de autocompletar, exibindo
 <li>Também é possível ver onde cada classe é utilizada em outras partes do código.</li>
 <li>Isso ajuda a navegar rapidamente pela hierarquia de caracteres.</li>
 </ul>
-<p>Além disso, temos a capacidade de rastrear onde uma determinada classe está sendo utilizada. Por exemplo, ao procurar por ocorrências do uso de uma classe de caractere, podemos simplesmente inspecionar o nome da classe. Como ilustrado no exemplo, uma galha (<code>Gall</code>) é mencionada na descrição de <em>Mimosa gemmulata</em> Barneby, e ao clicar sobre ela, podemos abrir rapidamente seu respectivo arquivo (<a href="#fig-cross-reference" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>).</p>
+<p>Além disso, temos a capacidade de rastrear onde uma determinada classe está sendo utilizada. Por exemplo, ao procurar por ocorrências do uso de uma classe de caractere, podemos simplesmente inspecionar o nome da classe. Como ilustrado no exemplo, uma galha (<code>Gall</code>) é mencionada na descrição de <em>Mimosa gemmulata</em> Barneby, e ao clicar sobre ela, podemos abrir rapidamente seu respectivo arquivo (<a href="#fig-cross-reference" class="quarto-xref">Figura&nbsp;<span>4.3</span></a>).</p>
 <div id="fig-cross-reference" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cross-reference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./images/whereClass.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cross-reference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.3: O cruzamento de dependências entre módulos ajuda a identificar rapidamente onde um caractere é invocado, enquanto o VS Code rastreia e exibe com eficiência o uso de cada caractere da árvore de caracteres.
+Figura&nbsp;4.3: O cruzamento de dependências entre módulos ajuda a identificar rapidamente onde um caractere é invocado, enquanto o VS Code rastreia e exibe com eficiência o uso de cada caractere da árvore de caracteres.
 </figcaption>
 </figure>
 </div>
@@ -395,7 +560,7 @@ Figure&nbsp;4.3: O cruzamento de dependências entre módulos ajuda a identifica
 <img src="./images/multiline.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-multi-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.4: Editar código pode ser desafiador às vezes, mas o VS Code oferece ferramentas úteis para tornar o processo mais ágil, como a edição em múltiplas linhas.
+Figura&nbsp;4.4: Editar código pode ser desafiador às vezes, mas o VS Code oferece ferramentas úteis para tornar o processo mais ágil, como a edição em múltiplas linhas.
 </figcaption>
 </figure>
 </div>
@@ -406,14 +571,14 @@ Figure&nbsp;4.4: Editar código pode ser desafiador às vezes, mas o VS Code ofe
 </section>
 <section id="controle-de-versão-com-git" class="level2">
 <h2 class="anchored" data-anchor-id="controle-de-versão-com-git">Controle de versão com Git</h2>
-<p>No VS Code, um clique rápido em um arquivo listado no painel do Git permite inspecionar instantaneamente as alterações no código (<a href="#fig-github" class="quarto-xref">Figure&nbsp;<span>4.5</span></a>). Ao abrir o arquivo, uma tela dividida é exibida, destacando as alterações em verde (edições) e vermelho (revisões), em comparação com a versão anterior do código. Essa funcionalidade facilita o processo de revisão, oferecendo uma maneira intuitiva e eficiente de acompanhar as modificações no ambiente de desenvolvimento.</p>
+<p>No VS Code, um clique rápido em um arquivo listado no painel do Git permite inspecionar instantaneamente as alterações no código (<a href="#fig-github" class="quarto-xref">Figura&nbsp;<span>4.5</span></a>). Ao abrir o arquivo, uma tela dividida é exibida, destacando as alterações em verde (edições) e vermelho (revisões), em comparação com a versão anterior do código. Essa funcionalidade facilita o processo de revisão, oferecendo uma maneira intuitiva e eficiente de acompanhar as modificações no ambiente de desenvolvimento.</p>
 <div id="fig-github" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-github-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./images/githubComparison.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-github-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.5: O VS Code se integra perfeitamente ao GitHub, tornando-se amigável mesmo para usuários com pouca experiência, exigindo apenas uma curva de aprendizado leve.
+Figura&nbsp;4.5: O VS Code se integra perfeitamente ao GitHub, tornando-se amigável mesmo para usuários com pouca experiência, exigindo apenas uma curva de aprendizado leve.
 </figcaption>
 </figure>
 </div>
@@ -422,42 +587,42 @@ Figure&nbsp;4.5: O VS Code se integra perfeitamente ao GitHub, tornando-se amig�
 <section id="exportar-banco-de-dados-.json" class="level2">
 <h2 class="anchored" data-anchor-id="exportar-banco-de-dados-.json">Exportar banco de dados .json</h2>
 <p>Para exportar todos os táxons dentro de <code>./taxon/Mimosa</code>:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> export <span class="at">--genus</span> Mimosa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> export <span class="at">--genus</span> Mimosa</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="https://media.giphy.com/media/GKCQ1NTHrsGHaGCu07/giphy.gif" class="img-fluid"></p>
 <p>Para exportar apenas alguns táxons listados em <code>./input/taxonToImport.csv</code>, use:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> export <span class="at">--genus</span> Mimosa <span class="at">--load</span> csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> export <span class="at">--genus</span> Mimosa <span class="at">--load</span> csv</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O arquivo gerado será salvo em <code>./output/</code> com o nome <code>${genus}DB.json</code>.</p>
 <p><strong>Erros podem ocorrer em dois momentos:</strong></p>
 <ul>
 <li>Durante a <strong>compilação (TS)</strong>: como propriedades incorretas (ex: <code>ractole</code> em vez de <code>bracteole</code>)</li>
 <li>Durante a <strong>execução (JS)</strong>: como regras de negócio violadas (ex: <code>min = 5</code> e <code>max = 3</code>)</li>
 </ul>
-<p>Sobre os erros de compilação, por exemplo, dois problemas foram encontrados nos arquivos <code>Mimosa_test.ts</code> e <code>Mimosa_test2.ts</code> durante a tentativa de exportar o banco de dados de <em>Mimosa</em> (<a href="#fig-compilationEr" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>). No script <code>Mimosa_test.ts</code>, foi detectada uma propriedade não declarada para a face adaxial do folíolo. Já no script <code>Mimosa_test2.ts</code>, a classe <code>ractole</code> foi listada como uma propriedade da flor, mas a mensagem de erro sugere a correção para <code>bracteole</code>. Veja abaixo:</p>
+<p>Sobre os erros de compilação, por exemplo, dois problemas foram encontrados nos arquivos <code>Mimosa_test.ts</code> e <code>Mimosa_test2.ts</code> durante a tentativa de exportar o banco de dados de <em>Mimosa</em> (<a href="#fig-compilationEr" class="quarto-xref">Figura&nbsp;<span>4.6</span></a>). No script <code>Mimosa_test.ts</code>, foi detectada uma propriedade não declarada para a face adaxial do folíolo. Já no script <code>Mimosa_test2.ts</code>, a classe <code>ractole</code> foi listada como uma propriedade da flor, mas a mensagem de erro sugere a correção para <code>bracteole</code>. Veja abaixo:</p>
 <div id="fig-compilationEr" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-compilationEr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./images/exportCompilationError.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-compilationEr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.6: Erros ocorridos durante o processo de transpilação de arquivos .ts para .js decorrem de violações de regras de sintaxe estabelecidas ou inconsistências de tipos no código TypeScript. Essas violações incluem erros de sintaxe, tipagem incorreta ou uso inadequado de recursos da linguagem TypeScript. Cada mensagem de erro fornece detalhes específicos que ajudam na identificação e resolução do problema encontrado.
+Figura&nbsp;4.6: Erros ocorridos durante o processo de transpilação de arquivos .ts para .js decorrem de violações de regras de sintaxe estabelecidas ou inconsistências de tipos no código TypeScript. Essas violações incluem erros de sintaxe, tipagem incorreta ou uso inadequado de recursos da linguagem TypeScript. Cada mensagem de erro fornece detalhes específicos que ajudam na identificação e resolução do problema encontrado.
 </figcaption>
 </figure>
 </div>
-<p>Além disso, erros podem ser capturados durante a fase de execução. No exemplo abaixo, o comprimento de uma estípula foi definido com valor mínimo igual a <code>5</code> e máximo igual a <code>3</code>, utilizando o método <code>.setHeightMinMax()</code> (<a href="#fig-executionEr" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>). Esse tipo de erro não é detectado na compilação, pois o tipo (<code>number</code>) está correto, mas, durante a execução, uma mensagem no terminal informa que “a altura mínima deve ser menor que a altura máxima”. Veja abaixo:</p>
+<p>Além disso, erros podem ser capturados durante a fase de execução. No exemplo abaixo, o comprimento de uma estípula foi definido com valor mínimo igual a <code>5</code> e máximo igual a <code>3</code>, utilizando o método <code>.setHeightMinMax()</code> (<a href="#fig-executionEr" class="quarto-xref">Figura&nbsp;<span>4.7</span></a>). Esse tipo de erro não é detectado na compilação, pois o tipo (<code>number</code>) está correto, mas, durante a execução, uma mensagem no terminal informa que “a altura mínima deve ser menor que a altura máxima”. Veja abaixo:</p>
 <div id="fig-executionEr" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-executionEr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./images/exportExecutionError.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-executionEr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.7: Erros derivados da compilação de arquivos .js evitam erros em tempo de execução, aplicando as regras de negócio definidas em cada método de classe. Neste exemplo, apesar de não haver violação de tipo de dado — já que a função aceita dois números —, existe uma regra de negócio para validar se o valor mínimo é realmente menor que o valor máximo. Esse processo evita erros de inserção de dados, garantindo conformidade com as regras definidas.
+Figura&nbsp;4.7: Erros derivados da compilação de arquivos .js evitam erros em tempo de execução, aplicando as regras de negócio definidas em cada método de classe. Neste exemplo, apesar de não haver violação de tipo de dado — já que a função aceita dois números —, existe uma regra de negócio para validar se o valor mínimo é realmente menor que o valor máximo. Esse processo evita erros de inserção de dados, garantindo conformidade com as regras definidas.
 </figcaption>
 </figure>
 </div>
 <section id="conjunto-de-dados-de-fontes" class="level3">
 <h3 class="anchored" data-anchor-id="conjunto-de-dados-de-fontes">Conjunto de dados de fontes</h3>
 <p>Podemos criar um conjunto de dados consolidado que reúne todas as fontes em uma estrutura JSON achatada, facilitando o acesso por meio de consultas. Para gerar um banco de dados contendo apenas as fontes relacionadas aos táxons, execute o seguinte comando:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> exportSources <span class="at">--genus</span> Mimosa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> exportSources <span class="at">--genus</span> Mimosa</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Este conjunto de dados inclui um índice que se relaciona com o banco de dados principal e fornece o caminho completo da chave onde cada fonte está localizada:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>[{</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    index<span class="op">:</span> <span class="dv">7</span><span class="op">,</span></span>
@@ -473,7 +638,7 @@ Figure&nbsp;4.7: Erros derivados da compilação de arquivos .js evitam erros em
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>      figure<span class="op">:</span> <span class="st">'4I'</span><span class="op">,</span></span>
 <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>      obtainingMethod<span class="op">:</span> <span class="st">'scanningElectronMicroscope'</span></span>
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>}]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>}]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="exportar-banco-de-dados-.csv" class="level2">
@@ -482,14 +647,14 @@ Figure&nbsp;4.7: Erros derivados da compilação de arquivos .js evitam erros em
 </section>
 <section id="navegando-no-banco-de-dados" class="level2">
 <h2 class="anchored" data-anchor-id="navegando-no-banco-de-dados">Navegando no banco de dados</h2>
-<p>Utilizando a extensão JSON Grid Viewer (<a href="https://github.com/dutchigor/json-grid-viewer">https://github.com/dutchigor/json-grid-viewer</a>), disponível no Visual Studio Marketplace (<a href="https://marketplace.visualstudio.com/">https://marketplace.visualstudio.com/</a>), podemos explorar facilmente a estrutura detalhada de configurações JSON (<a href="#fig-jsonView" class="quarto-xref">Figure&nbsp;<span>4.8</span></a>).</p>
+<p>Utilizando a extensão JSON Grid Viewer (<a href="https://github.com/dutchigor/json-grid-viewer">https://github.com/dutchigor/json-grid-viewer</a>), disponível no Visual Studio Marketplace (<a href="https://marketplace.visualstudio.com/">https://marketplace.visualstudio.com/</a>), podemos explorar facilmente a estrutura detalhada de configurações JSON (<a href="#fig-jsonView" class="quarto-xref">Figura&nbsp;<span>4.8</span></a>).</p>
 <div id="fig-jsonView" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-jsonView-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./images/jsonView.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jsonView-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma visualização amigável de arquivos JSON. Seu foco principal é visualizar objetos e arrays, que são componentes típicos de uma estrutura JSON.
+Figura&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma visualização amigável de arquivos JSON. Seu foco principal é visualizar objetos e arrays, que são componentes típicos de uma estrutura JSON.
 </figcaption>
 </figure>
 </div>
@@ -502,7 +667,7 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <h3 class="anchored" data-anchor-id="consulta-por-caminho-de-caractere">Consulta por caminho de caractere</h3>
 <p>Um aspecto essencial das consultas é identificar um caminho JSON que represente propriedades aninhadas em um array de documentos em um banco de dados JSON. Neste caso, nosso objetivo é navegar pela árvore de caracteres para recuperar propriedades dos táxons.</p>
 <p>Vamos definir “propriedade” como um caminho de chaves dentro da árvore de caracteres. Quando queremos recuperar uma propriedade do banco, buscamos seu caminho JSON correspondente, como <code>trichomes.stellate</code>. Esta busca retorna os índices dos documentos onde a propriedade foi encontrada e os caminhos em que ela se localiza, usando o comando <code>findProperty</code>:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> findProperty <span class="at">--property</span> trichomes.stellate <span class="at">--genus</span> Mimosa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tts</span> findProperty <span class="at">--property</span> trichomes.stellate <span class="at">--genus</span> Mimosa</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O resultado deve ser similar a:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>[</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  { specificEpithet<span class="op">:</span> <span class="st">'furfuraceae'</span><span class="op">,</span> index<span class="op">:</span> <span class="dv">5</span><span class="op">,</span> paths<span class="op">:</span> [ <span class="st">'flower.corolla'</span> ] }<span class="op">,</span></span>
@@ -515,7 +680,7 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'flower.corolla'</span> </span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    ]</span>
 <span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>No exemplo acima, tricomas estrelados foram identificados na corola de <em>M. furfuraceae</em>, nos caules de <em>M. myuros</em> e tanto na face abaxial do folíolo quanto na corola de <em>M. schomburgkii</em>.</p>
 </section>
 <section id="consulta-flexível-chave-valor" class="level3">
@@ -524,7 +689,7 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <p>Para iniciar consultas em uma exportação do projeto TTS, execute os procedimentos fora do diretório do projeto. Comece criando um diretório separado (ex: <code>flex-json-searches</code>) e abra-o em um IDE como o VS Code.</p>
 <p>Para realizar consultas JSON flexíveis, instale os módulos <code>flex-json-searcher</code> (<a href="https://github.com/vicentecalfo/flex-json-searcher">https://github.com/vicentecalfo/flex-json-searcher</a>) e <code>fs</code>. No terminal, execute:</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install fs</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install flex-json-searcher</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install flex-json-searcher</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Depois, crie um arquivo <code>script.js</code> e insira o seguinte código:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">// script.js</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> fs <span class="op">=</span> <span class="pp">require</span>(<span class="st">'fs'</span>)</span>
@@ -549,9 +714,9 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
 <span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro durante o processamento:'</span><span class="op">,</span> error)</span>
 <span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute com:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Resultado esperado:</p>
 <pre><code>Espécies encontradas: [
   'afranioi',
@@ -566,7 +731,7 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <p>A consulta por intervalo permite buscar dados dentro de faixas específicas de valores, como datas, valores numéricos ou outros atributos.</p>
 <p>Instale os módulos:</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install fs</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install flex-json-searcher</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install flex-json-searcher</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Crie o arquivo <code>script2.js</code>:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">// script2.js</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> fs <span class="op">=</span> <span class="pp">require</span>(<span class="st">'fs'</span>)</span>
@@ -592,9 +757,9 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
 <span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro durante o processamento:'</span><span class="op">,</span> error)</span>
 <span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute com:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script2</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Resultado:</p>
 <pre><code>Espécies encontradas: [
   'bimucronata',
@@ -635,9 +800,9 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
 <span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro durante o processamento:'</span><span class="op">,</span> error)</span>
 <span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute com:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script3</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Resultado:</p>
 <pre><code>Espécies com entre 15 e 20 pares de folíolos:
  [ 'bimucronata', 'itatiaiensis', 'pilulifera var. pseudincana' ]</code></pre>
@@ -666,9 +831,9 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
 <span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Erro durante o processamento:'</span><span class="op">,</span> error)</span>
 <span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute com:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> script4</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Resultado:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>[</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  {</span>
@@ -694,19 +859,19 @@ Figure&nbsp;4.8: O pacote json-grid-viewer é altamente útil, pois fornece uma 
 <span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
 <span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
-<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>As informações completas de cada fonte estão facilmente acessíveis, como <code>sourceType</code> (tipo de fonte), <code>journal</code> (periódico), <code>figure</code> (figura) e <code>authorship</code> (autoria).</p>
 </section>
 <section id="outras-aplicações-de-consulta" class="level3">
 <h3 class="anchored" data-anchor-id="outras-aplicações-de-consulta">Outras aplicações de consulta</h3>
-<p>O MongoDB e sua ferramenta complementar, o MongoDB Compass, oferecem capacidades avançadas de consulta (<a href="#fig-mongodb" class="quarto-xref">Figure&nbsp;<span>4.9</span></a>). A linguagem de consulta do MongoDB, fortalecida por métodos como <code>find()</code> e um conjunto abrangente de operadores de comparação como <code>$lt</code> (menor que), <code>$gt</code> (maior que) e <code>$eq</code> (igual a), permite a filtragem precisa de documentos com base em critérios específicos. O MongoDB Compass, uma interface gráfica para o MongoDB, oferece uma plataforma intuitiva para construir e executar consultas visualmente. Ele simplifica a criação de consultas, a visualização de dados e a otimização, oferecendo uma representação gráfica amigável das estruturas de dados. Aproveitar o poder de consulta do MongoDB juntamente com a interface interativa do Compass permite que os usuários explorem, recuperem e manipulem dados de maneira eficaz em bancos de dados MongoDB.</p>
+<p>O MongoDB e sua ferramenta complementar, o MongoDB Compass, oferecem capacidades avançadas de consulta (<a href="#fig-mongodb" class="quarto-xref">Figura&nbsp;<span>4.9</span></a>). A linguagem de consulta do MongoDB, fortalecida por métodos como <code>find()</code> e um conjunto abrangente de operadores de comparação como <code>$lt</code> (menor que), <code>$gt</code> (maior que) e <code>$eq</code> (igual a), permite a filtragem precisa de documentos com base em critérios específicos. O MongoDB Compass, uma interface gráfica para o MongoDB, oferece uma plataforma intuitiva para construir e executar consultas visualmente. Ele simplifica a criação de consultas, a visualização de dados e a otimização, oferecendo uma representação gráfica amigável das estruturas de dados. Aproveitar o poder de consulta do MongoDB juntamente com a interface interativa do Compass permite que os usuários explorem, recuperem e manipulem dados de maneira eficaz em bancos de dados MongoDB.</p>
 <div id="fig-mongodb" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mongodb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./images/mongoMimosaDB.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mongodb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.9: O MongoDB Compass oferece uma estrutura robusta para visualizar e investigar bancos de dados orientados a documentos, permitindo consultas poderosas.
+Figura&nbsp;4.9: O MongoDB Compass oferece uma estrutura robusta para visualizar e investigar bancos de dados orientados a documentos, permitindo consultas poderosas.
 </figcaption>
 </figure>
 </div>
@@ -718,6 +883,19 @@ Figure&nbsp;4.9: O MongoDB Compass oferece uma estrutura robusta para visualizar
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    window.setColorSchemeToggle(window.hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -741,12 +919,12 @@ Figure&nbsp;4.9: O MongoDB Compass oferece uma estrutura robusta para visualizar
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -1136,4 +1314,5 @@ Figure&nbsp;4.9: O MongoDB Compass oferece uma estrutura robusta para visualizar
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
