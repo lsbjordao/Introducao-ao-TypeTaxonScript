@@ -131,7 +131,7 @@ Com base no exemplo acima, estamos afirmando a presença de tricomas capitado-fi
 Recomenda-se fortemente que as anotações sejam declaradas por último — mas, claro, antes da exportação da descrição da espécie.  
 Após a descrição, é importante adicionar o autor da descrição utilizando o atributo `descriptionAuthorship`, que recebe o nome e uma data em *timestamp* Unix (contagem de segundos desde 00:00:00 UTC de 01 de janeiro de 1970).
 
-```bash
+```ts
 // Autoria da descrição
 Mimosa_leptantha.descriptionAuthorship = new DescriptionAuthorship()
 Mimosa_leptantha.descriptionAuthorship.addAuthor({

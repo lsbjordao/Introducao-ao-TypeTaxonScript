@@ -539,12 +539,12 @@ Os termos <code>is</code> e <code>are</code> servem como sinônimos para indicar
 <h2 class="anchored" data-anchor-id="anotações">Anotações</h2>
 <p>Recomenda-se fortemente que as anotações sejam declaradas por último — mas, claro, antes da exportação da descrição da espécie.<br>
 Após a descrição, é importante adicionar o autor da descrição utilizando o atributo <code>descriptionAuthorship</code>, que recebe o nome e uma data em <em>timestamp</em> Unix (contagem de segundos desde 00:00:00 UTC de 01 de janeiro de 1970).</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">//</span> Autoria da descrição</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Mimosa_leptantha.descriptionAuthorship</span> = new DescriptionAuthorship<span class="er">(</span><span class="kw">)</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Mimosa_leptantha.descriptionAuthorship.addAuthor</span><span class="er">(</span><span class="kw">{</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">name:</span> <span class="st">'June Doe'</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">date:</span> 1692107172</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">})</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Autoria da descrição</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Mimosa_leptantha<span class="op">.</span><span class="at">descriptionAuthorship</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">DescriptionAuthorship</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Mimosa_leptantha<span class="op">.</span><span class="at">descriptionAuthorship</span><span class="op">.</span><span class="fu">addAuthor</span>({</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="st">'June Doe'</span><span class="op">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  date<span class="op">:</span> <span class="dv">1692107172</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>A classe <code>Source</code> foi modelada para armazenar citações no estilo <em>bibtex</em>, mas acrescentamos o atributo <code>obtainingMethod</code>, que pode ter um dos seguintes valores: <code>nakedEyes</code>, <code>stereoscope</code>, <code>opticalMicroscope</code>, <code>scanningElectronMicroscope</code>, <code>tranmissionElectronMicroscope</code>, <code>photo</code>, <code>drawing</code>.</p>
 <p>Para adicionar uma fonte e vincular a publicação à parte da planta, primeiro precisamos criar uma constante que armazenará a classe <code>Source</code>, e então usar o método <code>addSource()</code>:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode ts code-with-copy"><code class="sourceCode typescript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Fontes</span></span>
